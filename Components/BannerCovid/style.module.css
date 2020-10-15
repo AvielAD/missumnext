@@ -1,0 +1,13 @@
+.bannercovidContainer{
+    width: 100%;
+    background: #5F0569;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.bannercovidContent{
+    width: 80%;
+    height: 2rem;
+}
+
