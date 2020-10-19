@@ -13,9 +13,12 @@ import {
     DropdownItem,
     NavbarText
 } from 'reactstrap';
+import Link from 'next/link';
 import Logo from './assets/Logo.svg'
 import UserLogo from './assets/userlogo.svg';
 import Language from './assets/language.svg';
+import styles from './styles.module.css';
+
 const NavBarApp = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
@@ -33,24 +36,21 @@ const NavBarApp = () => {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mx-auto" navbar>
                         <NavItem>
-                            <NavLink href="/">Acerca de</NavLink>
+                            <Link href="/"><a className={styles.navbarappLink} >Acerca de</a></Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/">Instalaciones</NavLink>
+                            <Link href="/"><a className={styles.navbarappLink}>Instalaciones</a></Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/">Contacto</NavLink>
+                            <Link href="/"><a className={styles.navbarappLink}>Contacto</a></Link>
                         </NavItem>
                     </Nav>
                 </Collapse>
 
                 <Nav className="mx-auto" navbar>
-                    <NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>
-                                <NavbarBrand href="/">
-                                    <img src={Language} alt="logo" />
-                                </NavbarBrand>
+                                <img src={Language} alt="logo" />
                             </DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem>
@@ -61,7 +61,6 @@ const NavBarApp = () => {
                                 </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
-                    </NavItem>
 
                     <NavItem>
                         <NavbarBrand href="/">
