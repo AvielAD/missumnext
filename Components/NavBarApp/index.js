@@ -24,9 +24,6 @@ const NavBarApp = () => {
     const toggle = () => setIsOpen(!isOpen);
 
     return (
-        <header >
-
-
             <Navbar light expand="md">
 
                 <NavbarBrand href="/">
@@ -36,13 +33,13 @@ const NavBarApp = () => {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mx-auto" navbar>
                         <NavItem>
-                            <Link href="/"><a className={styles.navbarappLink} >Acerca de</a></Link>
+                            <Link href="/acercade"><a className={styles.navbarappLink} >Acerca de</a></Link>
                         </NavItem>
                         <NavItem>
-                            <Link href="/"><a className={styles.navbarappLink}>Instalaciones</a></Link>
+                            <Link href="/instalaciones"><a className={styles.navbarappLink}>Instalaciones</a></Link>
                         </NavItem>
                         <NavItem>
-                            <Link href="/"><a className={styles.navbarappLink}>Contacto</a></Link>
+                            <Link href="/contacto"><a className={styles.navbarappLink}>Contacto</a></Link>
                         </NavItem>
                     </Nav>
                 </Collapse>
@@ -68,11 +65,7 @@ const NavBarApp = () => {
                         </NavbarBrand>
                     </NavItem>
                 </Nav>
-
-
             </Navbar>
-
-        </header>
     );
 }
 

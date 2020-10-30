@@ -1,35 +1,80 @@
 import api from '../Services/api';
 import Head from 'next/head'
-import Header from '../Components/NavBarApp';
-import BannerCovid from '../Components/BannerCovid';
 import CarouselHome from '../Components/CarouselHome';
+import SearchBar from '../Components/ADMoleculas/SearchBar';
 import BannerConcept from '../Components/BannerConcept';
 import BannerPromo from '../Components/BannerPromo';
-export default function Home(props) {
+import BannerEquipament from '../Components/BannerEquipament';
+import BannerTurismo from '../Components/BannerTurismo';
+import BannerUbicacion from '../Components/BannerUbicacion';
+
+export default function Home({slidesCarousel, slidesConcept, Promos, Equipament}) {
   return (
-    <div>
+    <>
       <Head>
         <title>Missum</title>
         <link rel="icon" href="/isotipo.ico"/>
       </Head>
 
-      <Header />
 
-      <BannerCovid />
+      <section className="">
+        <div className="card">
+          <CarouselHome slidesCarousel={slidesCarousel}/>
+        </div>
+      </section>
 
-      <CarouselHome slidesCarousel={props.slidesCarousel}/>
+      <section className="container mt-5 mb-5">
+        <div className="row-12 text-center font-weight-bold mb-5">
+          <p className="h1">Missum, tu nuevo concepto Versatile Living</p>
+        </div>
 
-      <BannerConcept />
+        <BannerConcept slidesConcept={slidesConcept}/>
+      </section>
 
-      <BannerPromo />
+      <section className="container mt-5 mb-5">
+        <div className="container text-center">
+          <p className="h1 mb-5"> Promociones</p>
+        </div>
+          <BannerPromo Promos={Promos}/>
+      </section>
 
+      <section className="container mt-5 mb-5">
+        <div className="container text-center">
+          <p className="h1 mb-5"> ¡ Todos nuestros departamentos lo haran sentirse como en casa!</p>
+        </div>
       
+        <BannerEquipament Equipament={Equipament}/>
+      
+      </section>
+    
+      <section className="container mt-5 mb-5">
+        <BannerTurismo />
+      </section>
 
-    </div>
+      <section className="container mt-5 mb-5">
+        <div className="container text-center">
+          <p className="h1 mb-5"> Todo lo que necesitas para esta gran experiencia cerca de ti</p>
+        </div>
+
+        <BannerUbicacion />
+      </section>
+
+
+
+    </>
   )
 }
 
 Home.getInitialProps = async (ctx) => {
-  const res = await api.home.carousel();
-  return { slidesCarousel: res.data}
+  const BannerCarousel = await api.home.carousel();
+  const BannerConcept = await api.home.concept();
+  const BannerPromos = await api.home.promos();
+  const BannerEquipament = await api.home.equipament();
+
+  return { 
+    slidesCarousel: BannerCarousel.data,
+    slidesConcept: BannerConcept.data,
+    Promos: BannerPromos.data,
+    Equipament: BannerEquipament.data,
+  }
 }

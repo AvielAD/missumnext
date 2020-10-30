@@ -1,0 +1,7 @@
+.navBorder {
+    height: 5rem;
+    border: black;
+    border-radius: 40px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 1);
+}

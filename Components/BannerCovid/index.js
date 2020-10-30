@@ -5,11 +5,7 @@ import Link from 'next/link';
 const BannerCovid = () => {
     return(
         <>
-            <div className={styles.bannercovidContainer}>
-                <div className={styles.bannercovidContent}>
-                        <Link href="/covid19"><a className={styles.link}>Novedades Covid19</a></Link>
-                </div>
-            </div>        
+            <Link href="/covid19"><a className={styles.link}>Novedades Covid19</a></Link>
         </>
     );
 }

@@ -1,0 +1,54 @@
+
+.btnGhost{
+    position: relativate;
+    display: inline-block;
+    border: 2px solid var(--white);
+    padding: 10px 40px;
+    color: var(--white);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: var(--white);
+    transition: color 0.5s background 0.5s;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 1em;
+    min-width: 140px;
+    text-align: center;
+  }
+
+  .btnGhost.round{
+    border-radius: 30px;
+  }
+
+
+  /** Missum 1 #5F0569 */
+  .btnGhost.missum{
+    background-color: #5F0569;
+    border-color: #5F0569;
+    color: white;
+  }
+  
+  .btnGhost.missum:hover{
+    background-color: transparent;
+    color: #5F0569;
+  }
+  
+  .btnGhost.missum:active{
+    box-shadow: inset 0 0 20px #5F0569;
+  }
+
+  /** Missum 2 #F15C22 */
+.btnGhost.missum-t2{
+    background-color: #F15C22;
+    border-color: #F15C22;
+    color: white;
+}
+.btnGhost.missum-t2:hover{
+    background-color: transparent;
+    color: #F15C22;
+}
+.btnGhost.missum-t2:active{
+    box-shadow: inset 0 0 20px #F15C22;
+}

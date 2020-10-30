@@ -37,7 +37,7 @@ const Page = (props) => {
             key={item.id}
             className={Styles.carouselHeight}
           >
-            <img src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Image.url}`} alt={item.Title} width="100%" height="100%"/>
+            <img src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Image.url}`} alt={item.Title}/>
           </CarouselItem>
         );
       });
