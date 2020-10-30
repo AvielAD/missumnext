@@ -8,19 +8,19 @@ import BannerEquipament from '../Components/BannerEquipament';
 import BannerTurismo from '../Components/BannerTurismo';
 import BannerUbicacion from '../Components/BannerUbicacion';
 
-export default function Home({slidesCarousel, slidesConcept, Promos, Equipament}) {
+export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament }) {
   return (
     <>
       <Head>
         <title>Missum</title>
-        <link rel="icon" href="/isotipo.ico"/>
+        <link rel="icon" href="/isotipo.ico" />
       </Head>
 
 
-      <section className="">
-        <div className="card">
-          <CarouselHome slidesCarousel={slidesCarousel}/>
-        </div>
+      <section className="card">
+          <CarouselHome slidesCarousel={slidesCarousel} />
+
+          
       </section>
 
       <section className="container mt-5 mb-5">
@@ -28,28 +28,26 @@ export default function Home({slidesCarousel, slidesConcept, Promos, Equipament}
           <p className="h1">Missum, tu nuevo concepto Versatile Living</p>
         </div>
 
-        <BannerConcept slidesConcept={slidesConcept}/>
+        <BannerConcept slidesConcept={slidesConcept} />
       </section>
 
       <section className="container mt-5 mb-5">
         <div className="container text-center">
           <p className="h1 mb-5"> Promociones</p>
         </div>
-          <BannerPromo Promos={Promos}/>
+        <BannerPromo Promos={Promos} />
       </section>
 
       <section className="container mt-5 mb-5">
         <div className="container text-center">
           <p className="h1 mb-5"> ¡ Todos nuestros departamentos lo haran sentirse como en casa!</p>
         </div>
-      
-        <BannerEquipament Equipament={Equipament}/>
-      
+
+        <BannerEquipament Equipament={Equipament} />
+
       </section>
-    
-      <section className="container mt-5 mb-5">
-        <BannerTurismo />
-      </section>
+
+     
 
       <section className="container mt-5 mb-5">
         <div className="container text-center">
@@ -71,7 +69,7 @@ Home.getInitialProps = async (ctx) => {
   const BannerPromos = await api.home.promos();
   const BannerEquipament = await api.home.equipament();
 
-  return { 
+  return {
     slidesCarousel: BannerCarousel.data,
     slidesConcept: BannerConcept.data,
     Promos: BannerPromos.data,

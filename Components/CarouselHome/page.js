@@ -4,6 +4,7 @@ import {
     CarouselItem,
 } from 'reactstrap';
 import Styles from './Styles.module.css';
+import SearchBar from '../ADMoleculas/SearchBar';
 
 const Page = (props) => {
     const {slidesCarousel} = props;
@@ -35,9 +36,15 @@ const Page = (props) => {
             onExiting={() => setAnimating(true)}
             onExited={() => setAnimating(false)}
             key={item.id}
-            className={Styles.carouselHeight}
+            className=""
           >
             <img src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Image.url}`} alt={item.Title}/>
+
+            <div className="container card-img-overlay">
+                    <SearchBar />
+            </div>
+
+
           </CarouselItem>
         );
       });
@@ -51,6 +58,8 @@ const Page = (props) => {
                 className="carousel-fade"
             >
                 {slides}
+
+                
             </Carousel>
         </>
     );
