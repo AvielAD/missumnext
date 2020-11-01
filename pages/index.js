@@ -18,9 +18,14 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
 
 
       <section className="card">
-          <CarouselHome slidesCarousel={slidesCarousel} />
-
-          
+        <CarouselHome className="card-img" slidesCarousel={slidesCarousel} />
+        <div className="container d-flex">
+          <div>
+            <div className="positionHomeSearch bg-white border border-dark w-50 h-25 card-img-overlay">
+              <p>Banner</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="container mt-5 mb-5">
@@ -38,7 +43,7 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
         <BannerPromo Promos={Promos} />
       </section>
 
-      <section className="container mt-5 mb-5">
+      <section className="container mt-5 mb-5 d-none d-sm-none d-md-block">
         <div className="container text-center">
           <p className="h1 mb-5"> ¡ Todos nuestros departamentos lo haran sentirse como en casa!</p>
         </div>

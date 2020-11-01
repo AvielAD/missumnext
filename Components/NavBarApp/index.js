@@ -24,48 +24,40 @@ const NavBarApp = () => {
     const toggle = () => setIsOpen(!isOpen);
 
     return (
-            <Navbar light expand="md">
+        <Navbar light expand="md" >
 
-                <NavbarBrand href="/">
-                    <img src={Logo} alt="logo" />
-                </NavbarBrand>
-                <NavbarToggler onClick={toggle} />
-                <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mx-auto" navbar>
-                        <NavItem>
-                            <Link href="/acercade"><a className={styles.navbarappLink} >Acerca de</a></Link>
-                        </NavItem>
-                        <NavItem>
-                            <Link href="/instalaciones"><a className={styles.navbarappLink}>Instalaciones</a></Link>
-                        </NavItem>
-                        <NavItem>
-                            <Link href="/contacto"><a className={styles.navbarappLink}>Contacto</a></Link>
-                        </NavItem>
-                    </Nav>
-                </Collapse>
+            <NavbarBrand href="/">
+                <img src={Logo} alt="logo" />
+            </NavbarBrand>
+            <NavbarToggler onClick={toggle} />
+            <Collapse isOpen={isOpen} navbar>
 
-                <Nav className="mx-auto" navbar>
-                        <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle nav caret>
-                                <img src={Language} alt="logo" />
-                            </DropdownToggle>
-                            <DropdownMenu right>
-                                <DropdownItem>
-                                    Spanish
-                                </DropdownItem>
-                                <DropdownItem>
-                                    English
-                                </DropdownItem>
-                            </DropdownMenu>
-                        </UncontrolledDropdown>
 
+
+                <Nav className="mx-auto order-1 order-xs-2" navbar>
                     <NavItem>
-                        <NavbarBrand href="/">
-                            <img src={UserLogo} alt="logo" />
-                        </NavbarBrand>
+                        <Link href="/acercade"><a className={styles.navbarappLink} >Acerca de</a></Link>
+                    </NavItem>
+                    <NavItem>
+                        <Link href="/instalaciones"><a className={styles.navbarappLink}>Instalaciones</a></Link>
+                    </NavItem>
+                    <NavItem>
+                        <Link href="/contacto"><a className={styles.navbarappLink}>Contacto</a></Link>
                     </NavItem>
                 </Nav>
-            </Navbar>
+            </Collapse>
+
+            <Nav className="ml-auto order-2 order-xs-1" navbar>
+
+                <NavItem>
+                    <NavbarBrand href="/">
+                        <img src={UserLogo} alt="logo" />
+                    </NavbarBrand>
+                </NavItem>
+            </Nav>
+
+
+        </Navbar>
     );
 }
 

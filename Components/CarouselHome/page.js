@@ -3,11 +3,11 @@ import {
     Carousel,
     CarouselItem,
 } from 'reactstrap';
-import Styles from './Styles.module.css';
+import Styles from './styles.module.css';
 import SearchBar from '../ADMoleculas/SearchBar';
 
 const Page = (props) => {
-    const {slidesCarousel} = props;
+    const {slidesCarousel, className} = props;
 
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
@@ -36,14 +36,8 @@ const Page = (props) => {
             onExiting={() => setAnimating(true)}
             onExited={() => setAnimating(false)}
             key={item.id}
-            className=""
           >
-            <img src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Image.url}`} alt={item.Title}/>
-
-            <div className="container card-img-overlay">
-                    <SearchBar />
-            </div>
-
+            <img className={Styles.imageSize} src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Image.url}`} alt={item.Title}/>
 
           </CarouselItem>
         );
@@ -55,7 +49,7 @@ const Page = (props) => {
                 activeIndex={activeIndex}
                 next={next}
                 previous={previous}
-                className="carousel-fade"
+                className={`carousel-fade ${className} `}
             >
                 {slides}
 

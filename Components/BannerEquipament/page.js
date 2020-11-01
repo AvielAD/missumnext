@@ -5,7 +5,6 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 function TabPanel(props) {
@@ -21,7 +20,7 @@ function TabPanel(props) {
         >
             {value === index && (
                 <Box p={3}>
-                    <Typography>{children}</Typography>
+                    {children}
                 </Box>
             )}
         </div>
@@ -57,7 +56,7 @@ const Page = ({ Equipament }) => {
             <div className="card col-md-4" key={item.Imagen.url}>
                 <img src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Imagen.url}`} />
                 <div className="card-img-overlay">
-                    <p className="card-title">{item.Titulo}</p>
+                    <p className="card-title text'white">{item.Titulo}</p>
                     <p className="card-text">{item.Descripcion}</p>
                 </div>
             </div>
@@ -96,10 +95,10 @@ const Page = ({ Equipament }) => {
                     onChangeIndex={handleChangeIndex}
                 >
                     <TabPanel value={value} index={0} dir={theme.direction}>
-                        {elements}
+                        <p>Elementos</p>
                     </TabPanel>
                     <TabPanel value={value} index={1} dir={theme.direction}>
-                    {elements}
+                        <p>Elementos</p>
 
                     </TabPanel>
                 </SwipeableViews>
