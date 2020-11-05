@@ -19,12 +19,14 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
 
       <section className="card">
         <CarouselHome className="card-img" slidesCarousel={slidesCarousel} />
-        <div className="container d-flex">
-          <div>
-            <div className="positionHomeSearch bg-white border border-dark w-50 h-25 card-img-overlay">
-              <p>Banner</p>
-            </div>
+        <div className="row card-img-overlay d-flex justify-content-center align-items-center">
+          <div className="row w-50">
+            <p className="col-md-12 text-center text-white title-carousel title-h1Carousel"> ¡Configura tu estancia!</p>
+            <p className="col-md-12 text-center text-white title-carousel ">Tu comodidad es lo más importante, personaliza como desees</p>
+            <SearchBar className="col-md-12 w-100 mt-5"/>
           </div>
+
+        
         </div>
       </section>
 
@@ -52,7 +54,7 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
 
       </section>
 
-     
+
 
       <section className="container mt-5 mb-5">
         <div className="container text-center">

@@ -1,10 +1,10 @@
 import Page from './page'
 
-const SearchBar =() => {
+const SearchBar =({className}) => {
 
     return(
         <>
-            <Page/>
+            <Page className={className}/>
         </>
     )
 }

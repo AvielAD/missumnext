@@ -45,6 +45,21 @@ a {
   z-index: 1;
 }
 
+.changePointer{
+  color: black;
+}
+
 .changePointer:hover{
   cursor: pointer !important;
+  color: black;
+}
+
+.title-carousel{
+  z-index: 1;
+}
+
+
+.title-h1Carousel{
+  font-size: 3.5rem;
+  font-weight: 400;
 }

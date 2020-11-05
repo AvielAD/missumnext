@@ -10,6 +10,8 @@ import Bussines from './assets/InstaSvg/bussines.svg';
 import Equip from './assets/InstaSvg/equip.svg';
 import Cocina from './assets/cocina1.png';
 import Cuadro from './assets/cuadro.svg';
+import BannerFAQ from '../Components/BannerFAQ';
+import Sillon1 from './assets/sillon1.png';
 const Instalaciones = () => {
 
     return (
@@ -26,9 +28,11 @@ const Instalaciones = () => {
                 </div>
             </div>
 
+            <div className="mt-5 mb-5">
+                <BannerFAQ />
+            </div>
 
-
-            <div className="container-fluid">
+            <div className="container-fluid mt-5 mb-5">
                 <div className="row">
                     <div className="col-md-6">
                         <img className="img-fluid" src={ImgInstalaciones} alt="imagen instalaciones" />
@@ -84,6 +88,10 @@ const Instalaciones = () => {
 
                     </div>
                 </div>
+            </div>
+
+            <div className="container-fluid">
+                <img className="w-100" src={Sillon1} alt=""/>
             </div>
 
         </>

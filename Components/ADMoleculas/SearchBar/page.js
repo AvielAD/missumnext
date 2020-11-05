@@ -1,15 +1,13 @@
 import styles from './styles.module.css';
 import Stay from './stay';
 
-const Page = () => {
+const Page = ({className}) => {
 
     return (
         <>
-            <div className={styles.navBorder}>
+            <div className={`${className} ${styles.navBorder}`}>
 
                 <div className="">
-                    <Stay />
-                  
                 </div>
 
             </div>

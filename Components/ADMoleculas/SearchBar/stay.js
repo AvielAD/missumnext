@@ -9,8 +9,7 @@ const Stay = ({ handleSubmit }) => {
 
     return (
         <>
-        <div className="">
-            <div className=" w-25 text-center ">
+            <div className="">
                 <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                     <DropdownToggle caret className="bg-white text-dark border-0">
                         Tipo de Estancia
@@ -22,9 +21,6 @@ const Stay = ({ handleSubmit }) => {
                     </FormGroup>
                     </DropdownMenu>
                 </Dropdown>
-
-
-            </div>
             </div>
         </>
     )

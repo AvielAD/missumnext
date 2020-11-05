@@ -31,7 +31,7 @@ const Resultados = ({ values }) => {
         const [expanded, setExpanded] = React.useState(false);
 
         return (
-            <div className="card mb-3">
+            <div className="card mb-3" key={item.Titulo}>
                 <div className="row">
                     <img className="col-md-5 card-img changePointer" src={item.imageCard} alt="imagen card" />
                     <div className="col-md-7">
@@ -43,9 +43,11 @@ const Resultados = ({ values }) => {
                         }}>Ver Detalles</a>
                     </div>
                     <Collapse in={expanded} timeout="auto" unmountOnExit>
-                        <div className="">
-                            <div className="bg-missum-grey ">
-                                Lista oculta
+                        <div className="ml-3">
+                            <div className="bg-missum-grey">
+                                <p>Lista oculta</p>
+                                <p>Lista oculta</p>
+                                
                             </div>
                         </div>
                     </Collapse>
