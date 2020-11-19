@@ -3,8 +3,7 @@ import {
     Carousel,
     CarouselItem,
 } from 'reactstrap';
-import Styles from './styles.module.css';
-import SearchBar from '../ADMoleculas/SearchBar';
+import styles from './styles.module.css';
 
 const Page = (props) => {
     const {slidesCarousel, className} = props;
@@ -37,7 +36,7 @@ const Page = (props) => {
             onExited={() => setAnimating(false)}
             key={item.id}
           >
-            <img className={Styles.imageSize} src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Image.url}`} alt={item.Title}/>
+            <img className="img-fluid" src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Image.url}`} alt={item.Title}/>
 
           </CarouselItem>
         );
@@ -49,12 +48,12 @@ const Page = (props) => {
                 activeIndex={activeIndex}
                 next={next}
                 previous={previous}
-                className={`carousel-fade ${className} `}
+                className={`carousel-fade`}
             >
                 {slides}
-
-                
             </Carousel>
+
+            
         </>
     );
 

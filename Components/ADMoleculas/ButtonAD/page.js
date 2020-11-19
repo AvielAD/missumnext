@@ -1,10 +1,18 @@
 import styles from './styles.module.css';
 
-const Page =({Type, OnClick, Evento, Message}) =>{
+const Page =({Type, Evento, Message, className}) =>{
+    var style=styles.missum;
+
+
+    if(Type == "missumT2")
+        style=styles.missumT2;
+    else if(Type == "missumT3")
+        style=styles.missumT4;
+
 
     return (
         <>
-            <button type={Type} className={`${styles.btnGhost} ${styles.missum} ${styles.round}`}>{Message}</button>
+            <a className={`${styles.btnGhost} ${style} ${styles.round} ${className}`} onClick={Evento}>{Message}</a>
         </>
     )
 }

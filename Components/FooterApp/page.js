@@ -12,13 +12,14 @@ const Page = () => {
                         <img className="img-fluid" src={Logo} alt="imagen logo" />
                     </div>
                 </div>
+                <hr className="bg-white"/>
                 <div className="container row text-center">
-                    <p className="col-sm-12 col-md-3 text-white">Correo Missum</p>
-                    <p className="col-sm-12 col-md-2 text-white">Telefono Missum</p>
-                    <p className="col-sm-12 col-md-3 text-white">Direccion Missum</p>
-                    <p className="col-sm-12 col-md-2 text-white">Direccion Missum</p>
-                    <p className="col-sm-12 col-md-2 text-white">Direccion Missum</p>
+                    <p className="col-sm-12 col-md-3 text-white">operaciones@missum.mx</p>
+                    <p className="col-sm-12 col-md-2 text-white text-white">2229636166</p>
+                    <p className="col-sm-12 col-md-3 text-white">Camino Morillotla 29 Reserva Territorial Quetzalcoatl, San Andres Cholula.</p>
                 </div>
+                <hr className="bg-white"/>
+
             </div>
             <div className="container-fluid p-3">
                     <p className="text-white text-center">©2020 Missum. Todos los derechos reservados.</p>

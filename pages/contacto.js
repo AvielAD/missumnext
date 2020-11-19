@@ -3,7 +3,7 @@ import ContactoBannerForm from '../Components/ContactoBannerForm';
 import ContactoBannerDetail from '../Components/ContactoBannerDetail';
 
 const Contacto = () => {
-
+    
     return (
         <>
             <Head>
@@ -14,6 +14,7 @@ const Contacto = () => {
             <section className="container-fluid">
 
                 <ContactoBannerForm />
+
 
                 <ContactoBannerDetail />
 
@@ -33,5 +34,8 @@ const Contacto = () => {
         </>
     )
 }
+
+
+
 
 export default Contacto;

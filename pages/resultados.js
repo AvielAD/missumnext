@@ -1,43 +1,28 @@
 import React from 'react';
 import Head from 'next/head';
 import { withFormik, Field } from 'formik';
-import CardImg from './assets/CardImg.jpg';
 import Collapse from '@material-ui/core/Collapse';
 import Hidden from '@material-ui/core/Hidden';
+import NavbarApp from '../Components/ADMoleculas/SearchBar';
+import api from '../Services/api';
+import Link from 'next/link';
 
-const CardList = [
-    {
-        Titulo: 'Titulo',
-        Subtitulo: 'Subtitulo',
-        Costo: '2500',
-        Descripcion: 'Descripcion detallada para la tarjeta funcional',
-        maxPersonas: '2',
-        imageCard: CardImg,
-    },
-    {
-        Titulo: 'Titulo 2',
-        Subtitulo: 'Subtitulo',
-        Costo: '2500',
-        Descripcion: 'Descripcion detallada para la tarjeta funcional',
-        maxPersonas: '2',
-        imageCard: CardImg,
-    },
-]
+const Resultados = ({ values, departamentos }) => {
 
-const Resultados = ({ values }) => {
     const [expandedFilter, setExpandedFilter] = React.useState(true);
-
-    const Card = CardList.map((item) => {
+    const Card = departamentos.map((item, index) => {
         const [expanded, setExpanded] = React.useState(false);
 
         return (
-            <div className="card mb-3" key={item.Titulo}>
+            <div className="card mb-3" key={index}>
                 <div className="row">
-                    <img className="col-md-5 card-img changePointer" src={item.imageCard} alt="imagen card" />
+                    <img className="col-md-5 card-img imageResults" src={`${process.env.NEXT_PUBLIC_API_HOST}${item[4].url}`} alt="imagen card" />
                     <div className="col-md-7">
-                        <p className="h2 d-flex justify-content-between">{item.Titulo} <span className="h6">${item.Costo}/noche</span></p>
-                        <p className="">{item.Descripcion}</p>
-                        <p className="font-weight-bold">No. maximo de personas {item.maxPersonas}</p>
+                        <p className="h2 d-flex justify-content-between">
+                            <Link href={`/descripcion/${item[1]}`}>{item[0]}</Link> 
+                            <span className="h6">${item[3]}/noche</span></p>
+                        <p className="">{item[2]}</p>
+                        <p className="font-weight-bold">No. maximo de personas {item[5]}</p>
                         <a className="changePointer text-missum" onClick={() => {
                             setExpanded(!expanded);
                         }}>Ver Detalles</a>
@@ -63,9 +48,9 @@ const Resultados = ({ values }) => {
                 <title>Missum - Resultados</title>
             </Head>
             <div className="container">
-                <p className="h2">Resultados de tu Busqueda</p>
-                <div className="row bg-white border border-dark borderCircle1 mb-5 mt-3">
-                    prueba espacio
+                <p className="h2 mt-5 mb-5">Resultados de tu Busqueda</p>
+                <div className="row mb-5 d-flex justify-content-center">
+                   <NavbarApp />
                 </div>
 
                 <div className="">
@@ -105,6 +90,14 @@ const Resultados = ({ values }) => {
 
         </>
     )
+}
+
+export const getStaticProps = async (ctx) =>{
+    const res = await api.departamento.departamentos();
+    const titles = res.data.map((item, index)=>[item.Nombre, item.slug, item.Subtitulo, item.Costo, item.ImagenTarjeta, item.MaxPersonas])
+    return { 
+        props:{ departamentos: titles },
+    }
 }
 
 export default withFormik({

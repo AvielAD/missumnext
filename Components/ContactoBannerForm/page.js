@@ -1,7 +1,17 @@
 import ImageContact from './assets/contactImagen.png';
 import { withFormik, Field} from 'formik';
 import ButtonGhost from '../ADMoleculas/ButtonAD';
+import useSWR from 'swr';
+
+//const fetcher = url => fetch(url).then((res) => res.json());
+
 const Page = ({handleSubmit}) => {
+
+    /*function handleClick(){
+
+        const {data, error} = useSWR('/api/email', fetcher);
+
+    }*/
 
     return (
         <>
@@ -15,17 +25,13 @@ const Page = ({handleSubmit}) => {
                             <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" name="Name" placeholder="Nombre" />
                             <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" name="Email" type="email" placeholder="Correo" />
                             <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" name="Telefono" placeholder="Telefono" />
-                            <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" as="select" name="motivo" placeholder="Motivo de Contacto">
-                                <option value="BussinesCenter">Informacion sobre el Bussines Center</option>
-                                <option value="Catering">Informacion sobre el catering</option>
-                                <option value="PuebloMagico">Informacion excursiones pueblos magicos</option>
-                            </Field>
+                            <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" name="Mensaje" placeholder="Mensaje" />
+                            
                             <div className="d-flex justify-content-end mt-5">
-                                <ButtonGhost Type="submit" Message="Enviar"></ButtonGhost>
+                                <ButtonGhost Type="submit" Message="Enviar" Evento={handleSubmit}></ButtonGhost>
                             </div>
                         </form>
                     </div>
-
                 </div>
             </div>
         </>
@@ -33,6 +39,14 @@ const Page = ({handleSubmit}) => {
 }
 
 export default withFormik({
+    mapPropsToValues(propr){
+        return{
+            Name: '',
+            Email: '',
+            Telefono: '',
+            Mensaje: ''
+        }
+    },
     handleSubmit(values){
         console.log(values)
     }

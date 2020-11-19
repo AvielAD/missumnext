@@ -1,5 +1,4 @@
 import styles from './styles.module.css';
-import Stay from './stay';
 
 const Page = ({className}) => {
 

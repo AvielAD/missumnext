@@ -1,5 +1,21 @@
 
 .imageSize{
-    height: 80vh;
+    height: auto;
     width: 100%;
 }
+.heightContainer{
+    height: 85;
+    width: 100%;
+}
+.overlayContent{
+    position: absolute;
+    left: 2rem;
+    top: 10rem;
+    z-index: 2;
+}
+@media (max-width: 575.98px) { 
+    .heightContainer{
+        height: 50vh;
+        width: 100%;
+    }   
+ }

@@ -14,7 +14,7 @@ import {
     NavbarText
 } from 'reactstrap';
 import Link from 'next/link';
-import Logo from './assets/Logo.svg'
+import Logo from './assets/logo.svg'
 import UserLogo from './assets/userlogo.svg';
 import Language from './assets/language.svg';
 import styles from './styles.module.css';

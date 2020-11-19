@@ -12,7 +12,10 @@ import Cocina from './assets/cocina1.png';
 import Cuadro from './assets/cuadro.svg';
 import BannerFAQ from '../Components/BannerFAQ';
 import Sillon1 from './assets/sillon1.png';
-const Instalaciones = () => {
+
+import api from '../Services/api';
+
+const Instalaciones = ({Video}) => {
 
     return (
         <>
@@ -20,82 +23,23 @@ const Instalaciones = () => {
                 <title>Missum - Instalaciones</title>
             </Head>
 
-            <div className="card">
-                <img className="card-img" src={Cocina} alt="cocina"/>
-                <div className="card-img-overlay bg-white w-50 h-50 d-flex justify-content-end">
-                    <p className="h1">Conoce nuestros departamentos</p>
-                    <img className="d-flex align-self-center" src={Cuadro} alt="cuadro"/>
-                </div>
+            <div className="">
+                <video className="h-25 w-100" preload="none" controls poster={Cocina}>
+                    <source src={`${process.env.NEXT_PUBLIC_API_HOST}${Video.video.url}`} type="video/mp4" />
+                </video>
+                <p className="h2">Conoce nuestros departamentos</p>
+                <img className="" src={Cuadro} alt="cuadro"/>
             </div>
 
-            <div className="mt-5 mb-5">
-                <BannerFAQ />
-            </div>
-
-            <div className="container-fluid mt-5 mb-5">
-                <div className="row">
-                    <div className="col-md-6">
-                        <img className="img-fluid" src={ImgInstalaciones} alt="imagen instalaciones" />
-                    </div>
-
-                    <div className="col-md-6">
-                        <p className="text-center h1 mb-5 mt-5">Beneficio y Servicios</p>
-
-                        <div className="row text-center d-flex justify-content-around mt-5 mb-5">
-                            <div className="">
-                                <img src={Train} alt="imagen" />
-                                <p className="">Traslado al aeropuerto</p>
-                            </div>
-                            <div className="">
-                                <img src={Gym} alt="imagen" />
-                                <p className="">Traslado al aeropuerto</p>
-                            </div>
-                        </div>
-
-                        <div className="row text-center d-flex justify-content-around mt-5 mb-5">
-                            <div className="">
-                                <img src={Recep} alt="imagen" />
-                                <p className="">Traslado al aeropuerto</p>
-                            </div>
-                            <div className="">
-                                <img src={Wifi} alt="imagen" />
-                                <p className="">Traslado al aeropuerto</p>
-                            </div>
-                        </div>
-
-                        <div className="row text-center d-flex justify-content-around mt-5 mb-5">
-                            <div className="">
-                                <img src={Pool} alt="imagen" />
-                                <p className="">Traslado al aeropuerto</p>
-                            </div>
-                            <div className="">
-                                <img src={Parking} alt="imagen" />
-                                <p className="">Traslado al aeropuerto</p>
-                            </div>
-                        </div>
-
-                        <div className="row text-center d-flex justify-content-around mt-5 mb-5">
-                            <div className="">
-                                <img src={Bussines} alt="imagen" />
-                                <p className="">Traslado al aeropuerto</p>
-                            </div>
-                            <div className="">
-                                <img src={Equip} alt="imagen" />
-                                <p className="">Traslado al aeropuerto</p>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-
-            <div className="container-fluid">
-                <img className="w-100" src={Sillon1} alt=""/>
-            </div>
-
+            
         </>
     )
 }
-
+Instalaciones.getInitialProps = async (ctx) => {
+    const VideoHome = await api.Videos.getVideo(2);
+  
+    return {
+      Video: VideoHome.data,
+    }
+  }
 export default Instalaciones;

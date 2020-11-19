@@ -10,16 +10,24 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "@sendgrid/mail": "^7.4.0",
     "axios": "^0.20.0",
     "bootstrap": "^4.5.3",
     "formik": "^2.2.1",
+    "fs": "0.0.1-security",
     "next": "9.5.5",
     "next-images": "^1.6.0",
+    "next-videos": "^1.4.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-elastic-carousel": "^0.9.5",
     "react-router-dom": "^5.2.0",
     "react-swipeable-views": "^0.13.9",
     "reactstrap": "^8.6.0",
-    "tiny-slider-react": "^0.5.3"
+    "redux": "^4.0.5",
+    "styled-components": "^5.2.1",
+    "swr": "^0.3.9",
+    "tiny-slider-react": "^0.5.3",
+    "video-react": "^0.14.1"
   }
 }

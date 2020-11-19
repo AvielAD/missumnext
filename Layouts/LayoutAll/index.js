@@ -1,8 +1,0 @@
-
-const LayoutAll = () => {
-    return (
-        <>
-            
-        </>
-    );
-}
