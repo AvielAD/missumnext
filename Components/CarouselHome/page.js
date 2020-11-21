@@ -12,15 +12,15 @@ const Page = (props) => {
     const slides = slidesCarousel.map((item, index) => {
 
         return (
-            <div className="fadeIn" key={index}>
-                <img className="h-100 w-100 FadeOut " src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Image.url}`} alt={item.Title}/>
+            <div className="h-50 w-100 h-100" key={index}>
+                <img className="heightCarouselHome" src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Image.url}`} alt={item.Title}/>
             </div>
         );
       });
 
     return (
         <>
-            <Carousel className="border-0" ref={carouselRef}
+            <Carousel className="border-0 " ref={carouselRef}
             enableAutoPlay autoPlaySpeed={3500} itemsToShow={1} showArrows={false} 
             pagination={false} onNextEnd={({ index }) => {
                 clearTimeout(resetTimeout)

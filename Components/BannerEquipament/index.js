@@ -68,22 +68,35 @@ const Turismo = [
         Imagen: {
             url: ImagenTest
         },
-        Titulo: 'Hospital Mac',
-        Descripcion: 'Distancia 4km'
+        Titulo: 'Piramide de Cholula',
+        Descripcion: 'Distancia 5.4km'
     },
     {
         Imagen: {
             url: ImagenTestCholula
         },
-        Titulo: 'Zona Turistica Cholula',
-        Descripcion: 'Distancia 4km'
+        Titulo: 'Estrella de Puebla',
+        Descripcion: 'Distancia 6.1km'
     },
     {
         Imagen: {
             url: Univer
         },
-        Titulo: 'Universidad de las Americas',
-        Descripcion: 'Distancia 4km'
+        Titulo: 'Centro Comercial Angelopolis',
+        Descripcion: 'Distancia 5.3km'
     },
-
+    {
+        Imagen: {
+            url: Univer
+        },
+        Titulo: 'Museo Barroco',
+        Descripcion: 'Distancia 8km'
+    },
+    {
+        Imagen: {
+            url: Univer
+        },
+        Titulo: 'Tren Turistico',
+        Descripcion: 'Distancia 5.8km'
+    },
 ]
