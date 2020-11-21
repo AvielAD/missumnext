@@ -1,55 +1,35 @@
-import React, { useState } from 'react';
-import {
-    Carousel,
-    CarouselItem,
-} from 'reactstrap';
+import React, { useState, useRef } from 'react';
+
+import Carousel from 'react-elastic-carousel';
+
 import styles from './styles.module.css';
 
 const Page = (props) => {
     const {slidesCarousel, className} = props;
+    let resetTimeout;
+    const carouselRef = useRef(null); 
 
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [animating, setAnimating] = useState(false);
-
-    const next = () => {
-        if (animating) return;
-        const nextIndex = activeIndex === slidesCarousel.length - 1 ? 0 : activeIndex + 1;
-        setActiveIndex(nextIndex);
-    }
-
-    const previous = () => {
-        if (animating) return;
-        const nextIndex = activeIndex === 0 ? slidesCarousel.length - 1 : activeIndex - 1;
-        setActiveIndex(nextIndex);
-    }
-
-    const goToIndex = (newIndex) => {
-        if (animating) return;
-        setActiveIndex(newIndex);
-    }
-
-    const slides = slidesCarousel.map((item) => {
+    const slides = slidesCarousel.map((item, index) => {
 
         return (
-          <CarouselItem
-            onExiting={() => setAnimating(true)}
-            onExited={() => setAnimating(false)}
-            key={item.id}
-          >
-            <img className="img-fluid" src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Image.url}`} alt={item.Title}/>
-
-          </CarouselItem>
+            <div className="fadeIn" key={index}>
+                <img className="h-100 w-100 FadeOut " src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Image.url}`} alt={item.Title}/>
+            </div>
         );
       });
 
     return (
         <>
-            <Carousel
-                activeIndex={activeIndex}
-                next={next}
-                previous={previous}
-                className={`carousel-fade`}
-            >
+            <Carousel className="border-0" ref={carouselRef}
+            enableAutoPlay autoPlaySpeed={3500} itemsToShow={1} showArrows={false} 
+            pagination={false} onNextEnd={({ index }) => {
+                clearTimeout(resetTimeout)
+                if (index + 1 === slidesCarousel.length) {
+                   resetTimeout = setTimeout(() => {
+                      carouselRef.current.goTo(0)
+                  }, 3500) // same time
+                }
+           }}>
                 {slides}
             </Carousel>
 

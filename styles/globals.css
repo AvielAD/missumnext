@@ -1,8 +1,12 @@
+@font-face{
+  font-family: MissumFont;
+  src: url('./Font/GillSans.otf');
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Gill Sans';
 }
 
 a {
@@ -12,6 +16,7 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: MissumFont;
 }
 .bg-missum{
   background: #5F0569;
@@ -122,10 +127,36 @@ elements Overlay
 
 /** Single carousel*/
 
-.rec.rec-indicators{
+.rec .rec-indicators{
   border-radius: 40px;
 }
-
+.rec .rec-pagination .rec-dot{
+  font-size: 0.3rem;
+  margin: 1.3rem;
+  border-radius: 40px 40px;
+}
+.fadeIn{
+  animation: FadeIn ease 1s;
+}
+.fadeOut{
+  animation: FadeOut ease 1s;
+}
+@keyframes FadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@keyframes FadeOut{
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
 /** space link a*/
 ul li{
   text-decoration: none;
@@ -134,10 +165,27 @@ ul li{
 ul li {
   margin-top: 2rem;
 }
-/** size dimension */
+/** size dimension bussines center*/
 .box-video{
   height: 300px;
   width: 200px;
   font-size: 0.7rem;
 }
 
+
+/**Video dimensions define*/
+
+.boxVideo{
+  width: 100%;
+  height: 30rem;
+}
+
+/*Seccion Promociones*/
+.heightPromociones{
+  height: 30rem;
+}
+
+/*Seccion Equipamiento Urbano y Turismo*/
+.heightEquipament{
+  height: 40rem;
+}

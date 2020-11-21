@@ -13,7 +13,7 @@ import bussines1 from './assets/bussines1.png';
 import bussines2 from './assets/bussines2.png';
 
 export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament, Video}) {
-
+  
   return (
     <>
       <Head>
@@ -22,11 +22,10 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
 
 
       <section className="">
-          <CarouselHome slidesCarousel={slidesCarousel}>
-          </CarouselHome>
+          <CarouselHome slidesCarousel={slidesCarousel} />
       </section>
 
-      <section className="container mt-5 mb-5">
+      <section className="container mt-5  mb-5">
         <div className="row-12 text-center font-weight-bold mb-5">
           <p className="h1">Missum, tu nuevo concepto Versatile Living</p>
         </div>
@@ -71,7 +70,7 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
 
       <section id="#video" className="container">
         <div>
-          <video className="h-25 w-100" controls preload="none" poster={Cocina}>
+          <video className="boxVideo" controls preload="none" poster={`${process.env.NEXT_PUBLIC_API_HOST}${Video.Portada.url}`}>
             <source src={`${process.env.NEXT_PUBLIC_API_HOST}${Video.video.url}`}/>
 
           </video>

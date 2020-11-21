@@ -32,9 +32,7 @@ const NavBarApp = () => {
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
 
-
-
-                <Nav className="mx-auto order-1 order-xs-2" navbar>
+                <Nav className="mx-auto" navbar>
                     <NavItem>
                         <Link href="/acercade"><a className={styles.navbarappLink} >Acerca de</a></Link>
                     </NavItem>
@@ -47,15 +45,7 @@ const NavBarApp = () => {
                 </Nav>
             </Collapse>
 
-            <Nav className="ml-auto order-2 order-xs-1" navbar>
-
-                <NavItem>
-                    <NavbarBrand href="/">
-                        <img src={UserLogo} alt="logo" />
-                    </NavbarBrand>
-                </NavItem>
-            </Nav>
-
+            
 
         </Navbar>
     );

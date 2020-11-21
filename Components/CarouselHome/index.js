@@ -6,14 +6,7 @@ const CarouselHome =(props)=>{
     
     return(
         <>
-         <div className="heightContainer">
-            
-            <Page slidesCarousel={slidesCarousel} className="card-img"/>
-
-            <div className="card-image-overlay">
-                {props.children}
-            </div>
-        </div>
+            <Page slidesCarousel={slidesCarousel}/>
         </>
     )
 }
