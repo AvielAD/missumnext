@@ -1,4 +1,4 @@
-import ImageContact from './assets/contactImagen.png';
+import ImageContact from './assets/DSC062851.png';
 import { withFormik, Field} from 'formik';
 import ButtonGhost from '../ADMoleculas/ButtonAD';
 import useSWR from 'swr';
@@ -19,8 +19,8 @@ const Page = ({handleSubmit}) => {
                 <img className="col-md-8" src={ImageContact} alt="imagen contacto" />
                 <div className="col-md-4">
                     <div className="">
-                        <p className="h1 mt-5 mb-4">Busca el lugar perfecto para hospedarte</p>
-                        <p className="">Viajes por deportes, bodas o conferencias, lo que tú quieras. hacemos que las reservas en grupos sean más fáciles.</p>
+                        <p className="h1 mt-5 mb-4">Busca el lugar perfecto para hospedarte o arrendar</p>
+                        <p className="">Viajas de manera individual o grupal o buscas rentar.</p>
                         <form onSubmit={handleSubmit}>
                             <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" name="Name" placeholder="Nombre" />
                             <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" name="Email" type="email" placeholder="Correo" />

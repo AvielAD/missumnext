@@ -60,9 +60,9 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
           </div>
 
           <div className="card-img-overlay box-video bg-missum text-white">
-              <p className="card-text ">Planifica tu próxima reunión de negocios o a tu próximo evento expecial con nosotros</p>
-              <p className="card-text ">Missum ofrece salas de reuniones que pueden recibir hasta 4 personas y una terraza con capacidad maxima para 20 personas</p>
-              <p className="card-text ">Pregunta por nuestros paquetes de sesiones con coffe break.</p>
+              <p className="card-text ">Planifica tu próxima reunión de negocios o tu próximo evento especial con nosotros</p>
+              <p className="card-text ">Missum ofrece salas de reuniones que pueden recibir hasta 4 personas y una terraza con capacidad máxima para 20 personas</p>
+              <p className="card-text ">Pregunta por nuestros paquetes de sesiones con coffee break.</p>
           </div>
         </div>
       </section>

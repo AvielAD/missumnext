@@ -134,8 +134,8 @@ const Instalaciones = (props) => {
                 </div>
 
                 <div className={`${Gallery == "amenidades" ? '' : 'd-none'} container col-md-12`}>
-                    <ImageGallery  additionalClass="h-100 w-100" items={listA} lazyLoad={true} showThumbnails={false} showNav={false}
-                        showBullets={true} showIndex={true} useBrowserFullscreen={true} />
+                    <ImageGallery  items={listA} lazyLoad={true} showThumbnails={false} showNav={false}
+                        showBullets={true} showIndex={true} useBrowserFullscreen={true} showPlayButton={false} />
                 </div>
 
                 <div className={`${Gallery == "eventos" ? '' : 'd-none'} container col-md-12 `}>

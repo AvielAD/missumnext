@@ -1,4 +1,4 @@
-import ContactoImagen2 from './assets/contactImagen2.png';
+import ContactoImagen2 from './assets/DSC066761.png';
 import VectorTel from './assets/VectorTel.svg';
 import Cuadro from './assets/cuadro.svg';
 const Page = () => {
@@ -17,26 +17,21 @@ const Page = () => {
 
                 <div className="container row">
                     <div className="card">
-                        <img className="card-img img-fluid h-100" src={ContactoImagen2} alt="imagen contacto" />
+                        <img className="card-img img-fluid " src={ContactoImagen2} alt="imagen contacto" />
 
-                        <div className="card-img-overlay text-center d-flex justify-content-around align-items-center">
+                        <div className="card-img-overlay text-center d-flex justify-content-around align-items-center h-100">
                             
                                 <div className="">
                                     <img src={VectorTel} alt="telefono" />
-                                    <p className="text-white">beatrizochoa@missum.com</p>
-                                    <p className="text-white">5546734213</p>
+                                    <p className="text-white">gerencia@missum.mx</p>
+                                    <p className="text-missum-white">2229636166</p>
                                 </div>
+
 
                                 <div className="">
                                     <img src={VectorTel} alt="telefono" />
-                                    <p className="text-white">beatrizochoa@missum.com</p>
-                                    <p className="text-white">5546734213</p>
-                                </div>
-
-                                <div className="">
-                                    <img src={VectorTel} alt="telefono" />
-                                    <p className="text-white">beatrizochoa@missum.com</p>
-                                    <p className="text-white">5546734213</p>
+                                    <p className="text-white">operaciones@missum.mx</p>
+                                    <p className="text-missum-white">2229636166</p>
                                 </div>
                         </div>
 

@@ -9,7 +9,7 @@ const Page = (props) => {
     const Banner = slidesConcept.map((item)=>{
         return(
         <div className="col-md-4" key={item.Image.url}>
-            <img className="" src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Image.url}`} alt="Tower" className="" />
+            <img loading="lazy" className="" src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Image.url}`} alt="Tower" className="" />
             <p className="mt-4 font-weight-bold h5">{item.Title}</p>
             <p>{item.Description}</p>
         </div>
