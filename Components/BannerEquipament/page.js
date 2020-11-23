@@ -63,13 +63,13 @@ const Page = ({Equipamiento, Turismo}) => {
                 <div className={`d-none ${TabE? 'd-block':''}`}>
 
                     <div className="d-block d-sm-none">
-                        <Carousel itemsToShow={1}>
+                        <Carousel itemsToShow={1} showArrows={false}>
                             {elementsE}
                         </Carousel>
                     </div>
 
                     <div className="d-none d-sm-block d-md-block">
-                        <Carousel itemsToShow={3}>
+                        <Carousel itemsToShow={3} showArrows={false}>
                             {elementsE}
                         </Carousel>
                     </div>
@@ -78,13 +78,13 @@ const Page = ({Equipamiento, Turismo}) => {
 
                 <div className={`d-none ${TabT? 'd-block':''} `}>
                 <div className="d-block d-sm-none">
-                        <Carousel itemsToShow={1}>
+                        <Carousel itemsToShow={1} showArrows={false}>
                             {ElementsT}
                         </Carousel>
                     </div>
 
                     <div className="d-none d-sm-block d-md-block">
-                        <Carousel itemsToShow={3}>
+                        <Carousel itemsToShow={3} showArrows={false}>
                             {ElementsT}
                         </Carousel>
                     </div>

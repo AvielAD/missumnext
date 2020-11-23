@@ -78,10 +78,8 @@ a {
 elementos carousel home
 */
 .heightCarouselHome{
-  height: 84vh;
+  height: 100vh;
   width: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 
@@ -102,34 +100,6 @@ elements Overlay
   
 }
 
-/**
-    layout Instalaciones
-*/
-
-
-.containerInstalaciones{
-  width: 100%;
-  height: 60vh;
-}
-.overlayInsta1{
-  z-index: 20;
-  width: 50%;
-  height: 100%;
-}
-.containerInstalaciones .overlayInsta2{
-  position: inherit;
-  top: 10px;
-  z-index: 30;
-  height: 10rem;
-  width: 50%;
-  background-color: white;
-  font-size: 2.7rem;
-  font-weight: 400;
-}
-.overlayInsta3{
-  z-index: 40;
-}
-
 
 /** Single carousel*/
 
@@ -141,41 +111,12 @@ elements Overlay
   margin: 1.3rem;
   border-radius: 40px 40px;
 }
-.fadeIn{
-  animation: FadeIn ease 1s;
-}
-.fadeOut{
-  animation: FadeOut ease 1s;
-}
-@keyframes FadeIn{
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
-}
-@keyframes FadeOut{
-  0% {
-    opacity:1;
-  }
-  100% {
-    opacity:0;
-  }
-}
-/** space link a*/
-ul li{
-  text-decoration: none;
-  list-style: none;
-}
-ul li {
-  margin-top: 2rem;
-}
+
 /** size dimension bussines center*/
 .box-video{
-  height: 300px;
-  width: 200px;
-  font-size: 0.7rem;
+  height: 400px;
+  width: 300px;
+  font-size: 1rem;
 }
 
 
@@ -183,7 +124,15 @@ ul li {
 
 .boxVideo{
   width: 100%;
-  height: 30rem;
+  height: 40rem;
+}
+.boxMultimedia{
+  width: 100%;
+  height: 25rem;
+}
+.heightVideo{
+  width: 100%;
+  height: 40rem !important;
 }
 
 /*Seccion Promociones*/
@@ -193,12 +142,32 @@ ul li {
 
 /*Seccion Equipamiento Urbano y Turismo*/
 .heightEquipament{
-  height: 40rem;
+  height: 33rem;
 }
 
-/***/
-
-
+/**Seccion Instalaciones*/
+/** space link a*/
+ul li{
+  text-decoration: none;
+  list-style: none;
+}
+ul li {
+  margin-top: 1rem;
+}
+.heighGallery{
+  height: 20rem;
+}
+.overInstalation{
+  text-align: justify;
+  padding: 1rem;
+  height: 200px;
+  width: 400px;
+  font-size: 1.8rem;
+}
+.galleryInstal{
+  height: 20rem;
+  width: 100%;
+}
 
 @media (max-width: 575.98px) { 
   .heightCarouselHome{
@@ -206,6 +175,22 @@ ul li {
     width: 100%;
   }
 
+  .box-video{
+    height: 220px;
+    width: 180px;
+    font-size: 0.7rem;
+  }
+
+  .overInstalation{
+    padding: 1rem;
+    height: 80px;
+    width: 250px;
+    font-size: 1rem;
+  }
+
+  .overInstalation p {
+    height: 100%;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) { }

@@ -53,6 +53,32 @@ export default {
             url: `/videos/${id}`,
             method: 'get',
         })
+    },
+    Catalogo:{
+        Amenidades: ()=>requestHelper({
+            url: '/catalogo-amenidades',
+            method: 'get'
+        }),
+        Eventos: ()=>requestHelper({
+            url: '/catalogo-eventos',
+            method: 'get'
+        }),
+        HandicapF: ()=>requestHelper({
+            url: '/catalogo-handicaps',
+            method: 'get'
+        }),
+        HandicapP: ()=>requestHelper({
+            url: '/catalogo-handicaps',
+            method: 'get'
+        }),
+        DepartDoble: ()=>requestHelper({
+            url: '/catalogo-habitaciones',
+            method: 'get'
+        }),
+        Loft: ()=>requestHelper({
+            url: '/catalogo-lofts',
+            method: 'get'
+        }),
     }
     
 }

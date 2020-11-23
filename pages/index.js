@@ -25,7 +25,7 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
           <CarouselHome slidesCarousel={slidesCarousel} />
       </section>
 
-      <section className="container mt-5  mb-5">
+      <section className="container mt-4 mb-4">
         <div className="row-12 text-center font-weight-bold mb-5">
           <p className="h1">Missum, tu nuevo concepto Versatile Living</p>
         </div>
@@ -33,14 +33,14 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
         <BannerConcept slidesConcept={slidesConcept} />
       </section>
 
-      <section className="container mt-5 mb-5">
+      <section className="container mb-4">
         <div className="container text-center">
           <p className="h1 mb-5"> Promociones</p>
         </div>
         <BannerPromo Promos={Promos} />
       </section>
 
-      <section className="mt-5 mb-5">
+      <section className="mb-4">
         <div className="container text-center">
           <p className="h1 mb-5"> ¡ Todos nuestros departamentos lo haran sentirse como en casa!</p>
         </div>
@@ -49,10 +49,10 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
 
       </section>
 
-      <section id="#bussines" className="mt-5 mb-5">
+      <section id="#bussines" className="mb-4">
         <div className="container card border-0">
           
-          <div className="card-img p-5">
+          <div className="card-img p-3">
             <Carousel itemsToShow={1} showArrows={false}>
                <img src={bussines1} alt="bussines1"/>
                <img src={bussines2} alt="bussines2"/>
@@ -68,9 +68,9 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
       </section>
 
 
-      <section id="#video" className="container">
+      <section id="#video" className="container mb-4">
         <div>
-          <video className="boxVideo" controls preload="none" poster={`${process.env.NEXT_PUBLIC_API_HOST}${Video.Portada.url}`}>
+          <video className="boxMultimedia" controls preload="none" poster={`${process.env.NEXT_PUBLIC_API_HOST}${Video.Portada.url}`}>
             <source src={`${process.env.NEXT_PUBLIC_API_HOST}${Video.video.url}`}/>
 
           </video>
@@ -78,7 +78,7 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
       </section>
 
 
-      <section className="container mt-5 mb-5">
+      <section className="container ">
         <div className="container text-center">
           <p className="h1 mb-2"> Todo lo que necesitas para esta gran experiencia cerca de ti</p>
         </div>
@@ -92,7 +92,7 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
   )
 }
 
-Home.getInitialProps = async (ctx) => {
+export const getStaticProps = async (ctx) => {
   const BannerCarousel = await api.home.carousel();
   const BannerConcept = await api.home.concept();
   const BannerPromos = await api.home.promos();
@@ -100,10 +100,12 @@ Home.getInitialProps = async (ctx) => {
   const VideoHome = await api.Videos.getVideo(1);
 
   return {
-    slidesCarousel: BannerCarousel.data,
-    slidesConcept: BannerConcept.data,
-    Promos: BannerPromos.data,
-    Equipament: BannerEquipament.data,
-    Video: VideoHome.data,
+    props:{
+      slidesCarousel: BannerCarousel.data,
+      slidesConcept: BannerConcept.data,
+      Promos: BannerPromos.data,
+      Equipament: BannerEquipament.data,
+      Video: VideoHome.data,
+    }
   }
 }
