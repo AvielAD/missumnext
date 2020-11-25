@@ -2,7 +2,7 @@ import Page from './page';
 import ImagenTest from './assets/Hmac.png';
 import ImagenTestCholula from './assets/cholula.png';
 import Univer from './assets/Univer.png';
-
+import Hospital from './assets/hospital.png'
 const BannerEquipament = () =>{
 
 
@@ -22,21 +22,21 @@ const Equipamiento = [
         Imagen: {
             url: ImagenTest
         },
-        Titulo: 'Zona Turistica de Cholula',
-        Descripcion: 'Distancia 4.1km'
+        Titulo: 'Explanada',
+        Descripcion: 'Distancia 2.8 km'
     },
     {
         Imagen: {
-            url: ImagenTestCholula
+            url: Hospital
         },
         Titulo: 'Hospital Mac',
         Descripcion: 'Distancia 6.3km'
     },
     {
         Imagen: {
-            url: Univer
+            url: ImagenTestCholula
         },
-        Titulo: 'Explanada',
+        Titulo: 'Zona Turistica de Cholula',
         Descripcion: 'Distancia 2.8km'
     },
     {

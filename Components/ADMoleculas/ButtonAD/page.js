@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 
-const Page =({Type, Evento, Message, className}) =>{
+const Page =({Type, Evento, Message, className, Disabled}) =>{
     var style=styles.missum;
 
 
@@ -12,7 +12,7 @@ const Page =({Type, Evento, Message, className}) =>{
 
     return (
         <>
-            <a className={`${styles.btnGhost} ${style} ${styles.round} ${className}`} onClick={Evento}>{Message}</a>
+            <button type="submitting" disabled={Disabled} contentEditable={false} className={`${styles.btnGhost} ${style} ${styles.round} ${className}`} onClick={Evento}>{Message}</button>
         </>
     )
 }

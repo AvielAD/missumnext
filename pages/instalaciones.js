@@ -80,13 +80,13 @@ const Instalaciones = (props) => {
                 <div className="row">
                     <div className="bg-missum-grey col-md-4">
                         <ul className="">
-                            <li className=""><a className="text-dark">Instalaciones</a></li>
+                            <p className="text-dark h2">Instalaciones</p>
                             <li className=""><a onClick={() => setGallery("amenidades")} className="text-dark changeListPointer">Amenidades</a></li>
                             <li className=""><a onClick={() => setGallery("eventos")} className="text-dark changeListPointer">Salas de eventos y reuniones</a></li>
-                            <li className=""><a onClick={() => setGallery("handicapF")} className="text-dark changeListPointer">Departamento Handicap Friendly</a></li>
-                            <li className=""><a onClick={() => setGallery("handicapP")} className="text-dark changeListPointer">Departamento Pet Friendly</a></li>
                             <li className=""><a onClick={() => setGallery("doble")} className="text-dark changeListPointer">Departamento 2 habitaciones</a></li>
                             <li className=""><a onClick={() => setGallery("loft")} className="text-dark changeListPointer">Departamento tipo loft</a></li>
+                            <li className=""><a onClick={() => setGallery("handicapF")} className="text-dark changeListPointer">Departamento Handicap Friendly</a></li>
+                            <li className=""><a onClick={() => setGallery("handicapP")} className="text-dark changeListPointer">Departamento Pet Friendly</a></li>
                         </ul>
 
                     </div>
@@ -172,7 +172,12 @@ const Instalaciones = (props) => {
                 <div className="container col-xs-12 col-md-6 text-center mt-2">
                     <div className="row d-flex align-items-center d-flex justify-content-center h-100 w-100">
                     <p className="h1">Beneficios y servicios</p>
-                        
+
+                        <div className="col-6 col-md-6">
+                            <img src={Bussines} alt="icon svg"></img>
+                            <p>Bussines Center</p>
+                        </div>
+
                         <div className="col-6 col-md-6">
                             <img src={Gym} alt="icon svg"></img>
                             <p>Gimnasio</p>

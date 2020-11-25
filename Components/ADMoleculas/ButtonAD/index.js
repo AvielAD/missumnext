@@ -4,7 +4,7 @@ const ButtonAD =({Type, Evento, Message, className})=>{
 
     return(
         <>
-            <Page Type={Type} Message={Message} Evento={Evento} className={className}/>
+            <Page Type={Type} Message={Message} Evento={Evento} className={className} />
         </>
     )
 }

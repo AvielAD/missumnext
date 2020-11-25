@@ -6,9 +6,9 @@ const Page = (props) => {
 
     const { slidesConcept } = props;
 
-    const Banner = slidesConcept.map((item)=>{
+    const Banner = slidesConcept.map((item, index)=>{
         return(
-        <div className="col-md-4" key={item.Image.url}>
+        <div className="col-md-3" key={index}>
             <img loading="lazy" className="" src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Image.url}`} alt="Tower" className="" />
             <p className="mt-4 font-weight-bold h5">{item.Title}</p>
             <p>{item.Description}</p>

@@ -1,17 +1,14 @@
 import ImageContact from './assets/DSC062851.png';
 import { withFormik, Field} from 'formik';
 import ButtonGhost from '../ADMoleculas/ButtonAD';
-import useSWR from 'swr';
+import axios from 'axios';
+import stylesButton from '../ADMoleculas/ButtonAD/styles.module.css';
+import User from './assets/user.svg';
+import Smart from './assets/smartphone.svg';
+import Email from './assets/mail.svg';
+import Home from './assets/home.svg';
 
-//const fetcher = url => fetch(url).then((res) => res.json());
-
-const Page = ({handleSubmit}) => {
-
-    /*function handleClick(){
-
-        const {data, error} = useSWR('/api/email', fetcher);
-
-    }*/
+const Page = ({handleSubmit, isSubmitting}) => {
 
     return (
         <>
@@ -22,13 +19,25 @@ const Page = ({handleSubmit}) => {
                         <p className="h1 mt-5 mb-4">Busca el lugar perfecto para hospedarte o arrendar</p>
                         <p className="">Viajas de manera individual o grupal o buscas rentar.</p>
                         <form onSubmit={handleSubmit}>
-                            <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" name="Name" placeholder="Nombre" />
-                            <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" name="Email" type="email" placeholder="Correo" />
-                            <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" name="Telefono" placeholder="Telefono" />
-                            <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" name="Mensaje" placeholder="Mensaje" />
+                            <div className="d-flex flex-nowrap">
+                                <img src={User} alt=""/>
+                                <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" name="Name" placeholder="Nombre" />
+                            </div>
+                            <div className="d-flex flex-nowrap">
+                                <img src={Email} alt=""/>
+                                <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" name="Email" type="email" placeholder="Correo" />
+                            </div>
+                            <div className="d-flex flex-nowrap">
+                                <img src={Smart} alt=""/>
+                                <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" name="Telefono" placeholder="Telefono" />
+                            </div>                            
+                            <div className="d-flex flex-nowrap">
+                                <img src={Home} alt=""/>
+                                <Field className="col-md-12 border-top-0 border-right-0 border-left-0 p-2" name="Mensaje" placeholder="Mensaje" />
+                            </div>                    
                             
                             <div className="d-flex justify-content-end mt-5">
-                                <ButtonGhost Type="submit" Message="Enviar" Evento={handleSubmit}></ButtonGhost>
+                                <ButtonGhost Type="submit" Message="Enviar" Evento={handleSubmit} Disabled={isSubmitting}></ButtonGhost>
                             </div>
                         </form>
                     </div>
@@ -47,8 +56,10 @@ export default withFormik({
             Mensaje: ''
         }
     },
-    handleSubmit(values){
-        console.log(values)
+    handleSubmit(values, formikBag){
+        const res = axios.post('/api/email', values).then(res => res.data);
+        console.log(res)
+        formikBag.setSubmitting(false);
     }
 })(Page);
 

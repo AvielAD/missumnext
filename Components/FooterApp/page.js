@@ -13,7 +13,7 @@ const Page = () => {
                     </div>
                 </div>
                 <hr className="bg-white"/>
-                <div className="container row text-center">
+                <div className="container row text-center d-flex justify-content-center">
                     <p className="col-sm-12 col-md-3 text-white">operaciones@missum.mx</p>
                     <p className="col-sm-12 col-md-2 text-white text-white">2229636166</p>
                     <p className="col-sm-12 col-md-3 text-white">Camino Morillotla 29 Reserva Territorial Quetzalcoatl, San Andres Cholula.</p>

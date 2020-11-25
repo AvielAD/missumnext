@@ -55,7 +55,7 @@ const Page = ({Equipamiento, Turismo}) => {
         <>
             <div className="mt-5 mb-5">
                 <div className="d-flex flex-wrap justify-content-center">
-                    <p className="p-2 h2"><a className={`${TabE? 'text-missum':'text-dark'} changeListPointer`} onClick={handleEquipament}>Equipamiento</a></p>
+                    <p className="p-2 h2"><a className={`${TabE? 'text-missum':'text-dark'} changeListPointer`} onClick={handleEquipament}>Equipamiento Urbano</a></p>
                     <p className="p-2 h2"><a className={`${TabE? 'text-dark':'text-missum'} changeListPointer`} onClick={handleTurismo}>Turismo</a></p>
                 </div>
                 <hr className="bg-dark"/>

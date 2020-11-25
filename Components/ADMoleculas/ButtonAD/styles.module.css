@@ -27,7 +27,9 @@
     border-color: #5F0569;
     color: white;
   }
-  
+  .btnGhost.missum:focus{
+    outline: none;
+  }
   .btnGhost.missum:hover{
     cursor: pointer;
     background-color: transparent;
