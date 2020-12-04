@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
       <section className="container-fluid bg-missum text-center p-2 ">
         <BannerCovid />
       </section>
-
+      
       <Component {...pageProps} />
 
       <section className="bg-missum container-fluid">

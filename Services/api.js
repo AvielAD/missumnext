@@ -79,6 +79,22 @@ export default {
             url: '/catalogo-lofts',
             method: 'get'
         }),
-    }
+    },
+    Auth:{
+        
+        Login: (data) => requestHelper({
+            url: '/auth/local',
+            method: 'post',
+            data
+        }).catch((e)=>e.response),
+        Validate: (header) => requestHelper({
+            url: '/users/me',
+            method: 'get',
+            headers: {
+                Authorization: `Bearer ${header}` 
+            }
+        }).catch((e)=>e.response),
+    },
+   
     
 }

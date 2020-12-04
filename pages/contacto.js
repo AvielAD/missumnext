@@ -15,9 +15,7 @@ const Contacto = () => {
 
                 <ContactoBannerForm />
 
-
                 <ContactoBannerDetail />
-
 
                 <div className="border container w-75 mt-5 mb-5">
                     <div className="">

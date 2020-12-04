@@ -5,7 +5,6 @@ import ButtonGhost from '../../Components/ADMoleculas/ButtonAD';
 import styles from './styles.module.css';
 const departamento = ({ data }) => {
 
-    //console.log(data)
     const Imagenes = data.Imagenes.map((item, index) => {
         return (
             <div className="ImgSlugDepartaments p-1" key={index}>
@@ -13,9 +12,6 @@ const departamento = ({ data }) => {
             </div>
         )
     })
-
-
-
     return (
         <>
             <Head>
@@ -44,20 +40,17 @@ const departamento = ({ data }) => {
             </div>
 
             <div className="container d-flex flex-wrap mt-5 mb-5">
-                <div className="col-md-9">
+                <div className="col-md-9"> 
                     <div className="d-flex flex-wrap justify-content-between">
-                        <p className="h2">Departamento tipo: {data.tipo_departamento.Nombre}</p>
+                        <p className="h2">Departamento tipo: {data.categoria_departamento.Nombre}</p>
                         <p className=" font-weight-bold">No. maximo de personas: {data.MaxPersonas}</p>
                     </div>
-
                     <p>Descripcion del departamento</p>
-
                     <div className="">
                         <p>
                             {data.Descripcion}
                         </p>
                     </div>
-
                 </div>
                 <div className="col-md-3 bg-missum-grey">
                     <div className="">

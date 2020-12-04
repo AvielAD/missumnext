@@ -42,7 +42,7 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
 
       <section className="mb-4">
         <div className="container text-center">
-          <p className="h1 mb-5"> ¡ Todos nuestros departamentos lo haran sentirse como en casa!</p>
+          <p className="h1 mb-5"> ¡ Todos nuestros departamentos lo harán sentirse como en casa!</p>
         </div>
 
         <BannerEquipament Equipament={Equipament} />

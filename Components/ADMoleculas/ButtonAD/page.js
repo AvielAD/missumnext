@@ -12,7 +12,7 @@ const Page =({Type, Evento, Message, className, Disabled}) =>{
 
     return (
         <>
-            <button type="submitting" disabled={Disabled} contentEditable={false} className={`${styles.btnGhost} ${style} ${styles.round} ${className}`} onClick={Evento}>{Message}</button>
+            <button type="submit" disabled={Disabled} contentEditable={false} className={`${styles.btnGhost} ${style} ${styles.round} ${className}`} onClick={Evento}>{Message}</button>
         </>
     )
 }

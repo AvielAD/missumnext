@@ -5,7 +5,7 @@ const Page = ({ Promos }) => {
     const Promociones = Promos.map((item, index) => {
 
         return (
-            <div className="card p-1 border-0 heightPromociones" key={index}>
+            <div className="card p-1 border-0 heightPromociones " key={index}>
                 <img className="h-100 w-100" src={`${process.env.NEXT_PUBLIC_API_HOST}${item.Imagen.url}`} alt="imagen"></img>
                 <div className="card-img-overlay text-white">
                     <p className="card-title h1"> {item.Titulo}</p>

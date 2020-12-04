@@ -1,7 +1,7 @@
 import Logo from './assets/logofooter.svg';
 import styles from './styles.module.css';
-import Linked from './assets/linkedin.svg';
-import Twitter from './assets/twitter.svg';
+import Face from './assets/face.svg';
+import Insta from './assets/insta.svg';
 const Page = () => {
 
     return (
@@ -13,10 +13,16 @@ const Page = () => {
                     </div>
                 </div>
                 <hr className="bg-white"/>
-                <div className="container row text-center d-flex justify-content-center">
+                <div className="container row text-center d-flex justify-content-center d-flex align-items-center">
                     <p className="col-sm-12 col-md-3 text-white">operaciones@missum.mx</p>
                     <p className="col-sm-12 col-md-2 text-white text-white">2229636166</p>
-                    <p className="col-sm-12 col-md-3 text-white">Camino Morillotla 29 Reserva Territorial Quetzalcoatl, San Andres Cholula.</p>
+                    <p className="col-sm-12 col-md-3 text-white">Camino Morillotla 29 Reserva Territorial Quetzalcoatl, San Andrés Cholula.</p>
+                    <a href="https://www.facebook.com/Missumversatileliving-356190838351772">
+                        <img className="p-4" src={Face} alt="facebook"></img>
+                    </a>
+                    <a href="https://www.instagram.com/missum.versatile.living/">
+                        <img className="p-4" src={Insta} alt="Instagram"></img>
+                    </a>
                 </div>
                 <hr className="bg-white"/>
 

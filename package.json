@@ -13,6 +13,7 @@
     "@sendgrid/mail": "^7.4.0",
     "axios": "^0.20.0",
     "bootstrap": "^4.5.3",
+    "cookies": "^0.8.0",
     "formik": "^2.2.1",
     "fs": "0.0.1-security",
     "next": "9.5.5",

@@ -15,25 +15,16 @@ export default async function emailHandler(req, res){
                 user: "invitado.missum@outlook.com",
                 pass: "Missum20201!"
             },
-            tls:{
-                rejectUnauthorized:false,
-            },
 
         });
-
-        transporter.verify((err, sucess)=>{
-            if(err) console.log(err)
-            else console.log('verificated: ',sucess)
-        })
-
+      
         let info = await transporter.sendMail({
             from: 'invitado.missum@outlook.com',
-            to: 'operaciones@missum.mx, gerencia@missum.mx',
+            to: 'aviel.aldama@gmail.com',
             subject: Name,
-            text: `Numero Contacto: ${Telefono}`,
+            text: `Número Contacto: ${Telefono}`,
             html: `<div> Invitado: ${Name} <ul><li>${Email}</li> <li>${Telefono}</li></ul> <p>${Mensaje}</p></div>`
         });
-        console.log(info)
 
         res.status(200).json({response: 'recibido'});
     }

@@ -190,7 +190,7 @@ const Instalaciones = (props) => {
 
                         <div className="col-6">
                             <img src={Recep} alt="icon svg"></img>
-                            <p>Recepcion</p>
+                            <p>Recepción</p>
                         </div>
                         
                         <div className="col-6">
