@@ -17,6 +17,7 @@ import ImageGallery from 'react-image-gallery';
 import api from '../Services/api';
 import ImageI from './assets/DSC063791.png';
 import ImageI2 from './assets/DSC063601.png';
+import Carousel from 'react-elastic-carousel';
 
 const Instalaciones = (props) => {
     const { Video, Amenidades, Eventos, HandicapF, HandicapP, DepartDoble, Loft } = props;
@@ -30,11 +31,23 @@ const Instalaciones = (props) => {
         })
     })
 
+    const mapListA = listA.map((item, index) => {
+        return (
+            <img src={item.original} alt="imagen list " key={index} />
+        )
+    })
+
     const listE = Eventos.map((item) => {
         return ({
             'original': `${`${process.env.NEXT_PUBLIC_API_HOST}${item.Evento.url}`}`,
             'thumbnail': `${`${process.env.NEXT_PUBLIC_API_HOST}${item.Evento.formats.thumbnail.url}`}`
         })
+    })
+
+    const mapListE = listE.map((item, index) => {
+        return (
+            <img src={item.original} alt="imagen list " key={index} />
+        )
     })
 
     const listF = HandicapF.map((item) => {
@@ -44,11 +57,23 @@ const Instalaciones = (props) => {
         })
     })
 
+    const mapListF = listF.map((item, index) => {
+        return (
+            <img src={item.original} alt="imagen list " key={index} />
+        )
+    })
+
     const listP = HandicapP.map((item) => {
         return ({
             'original': `${`${process.env.NEXT_PUBLIC_API_HOST}${item.Handicap.url}`}`,
             'thumbnail': `${`${process.env.NEXT_PUBLIC_API_HOST}${item.Handicap.formats.thumbnail.url}`}`
         })
+    })
+
+    const mapListP = listP.map((item, index) => {
+        return (
+            <img src={item.original} alt="imagen list " key={index} />
+        )
     })
 
     const doble = DepartDoble.map((item) => {
@@ -58,12 +83,26 @@ const Instalaciones = (props) => {
         })
     })
 
+    const mapDoble = doble.map((item, index) => {
+        return (
+            <img src={item.original} alt="imagen list " key={index} />
+        )
+    })
+
     const loft = Loft.map((item) => {
         return ({
             'original': `${`${process.env.NEXT_PUBLIC_API_HOST}${item.Loft.url}`}`,
             'thumbnail': `${`${process.env.NEXT_PUBLIC_API_HOST}${item.Loft.formats.thumbnail.url}`}`
         })
     })
+
+    const mapLoft = loft.map((item, index) => {
+        return (
+            <img src={item.original} alt="imagen list " key={index} />
+        )
+    })
+
+
     return (
         <>
             <Head>
@@ -133,36 +172,96 @@ const Instalaciones = (props) => {
                     </div>
                 </div>
 
-                <div className={`${Gallery == "amenidades" ? '' : 'd-none'} container col-md-12`}>
-                    <ImageGallery  items={listA} lazyLoad={true} showThumbnails={false} showNav={false}
-                        showBullets={true} showIndex={true} useBrowserFullscreen={true} showPlayButton={false} />
+            </div>
+
+            <div className="mt-5 mb-5">
+                <div className={`${Gallery == "amenidades" ? '' : 'd-none'} col-md-12`}>
+                    <div className="d-block d-md-none">
+                        <Carousel itemsToShow={1} itemPadding={[10, 60]} showArrows={false}>
+                            {mapListA}
+                        </Carousel>
+                    </div>
+
+                    <div className="d-none d-md-block ">
+                        <Carousel itemsToShow={4} itemPadding={[10, 60]} showArrows={false}>
+                            {mapListA}
+                        </Carousel>
+                    </div>
+
                 </div>
 
                 <div className={`${Gallery == "eventos" ? '' : 'd-none'} container col-md-12 `}>
-                    <ImageGallery autoPlay={true} items={listE} lazyLoad={true} showThumbnails={false} showNav={false}
-                        showBullets={true} showIndex={true} useBrowserFullscreen={true} />
+                <div className="d-block d-md-none">
+                        <Carousel itemsToShow={1} itemPadding={[10, 60]} showArrows={false}>
+                            {mapListE}
+                        </Carousel>
+                    </div>
+
+                    <div className="d-none d-md-block ">
+                        <Carousel itemsToShow={4} itemPadding={[10, 60]} showArrows={false}>
+                            {mapListE}
+                        </Carousel>
+                    </div>
                 </div>
 
                 <div className={`${Gallery == "handicapF" ? '' : 'd-none'} container col-md-12 `}>
-                    <ImageGallery items={listF} lazyLoad={true} showThumbnails={false} showNav={false}
-                        showBullets={true} showIndex={true} useBrowserFullscreen={true} />
+                <div className="d-block d-md-none">
+                        <Carousel itemsToShow={1} itemPadding={[10, 60]} showArrows={false}>
+                            {mapListF}
+                        </Carousel>
+                    </div>
+
+                    <div className="d-none d-md-block ">
+                        <Carousel itemsToShow={4} itemPadding={[10, 60]} showArrows={false}>
+                            {mapListF}
+                        </Carousel>
+                    </div>
                 </div>
 
                 <div className={`${Gallery == "handicapP" ? '' : 'd-none'} container col-md-12 `}>
-                    <ImageGallery items={listP} lazyLoad={true} showThumbnails={false} showNav={false}
-                        showBullets={true} showIndex={true} useBrowserFullscreen={true} />
+                <div className="d-block d-md-none">
+                        <Carousel itemsToShow={1} itemPadding={[10, 60]} showArrows={false}>
+                            {mapListP}
+                        </Carousel>
+                    </div>
+
+                    <div className="d-none d-md-block ">
+                        <Carousel itemsToShow={4} itemPadding={[10, 60]} showArrows={false}>
+                            {mapListP}
+                        </Carousel>
+                    </div>
                 </div>
 
                 <div className={`${Gallery == "doble" ? '' : 'd-none'} container col-md-12 `}>
-                    <ImageGallery items={doble} lazyLoad={true} showThumbnails={false} showNav={false}
-                        showBullets={true} showIndex={true} useBrowserFullscreen={true} />
+                <div className="d-block d-md-none">
+                        <Carousel itemsToShow={1} itemPadding={[10, 60]} showArrows={false}>
+                            {mapDoble}
+                        </Carousel>
+                    </div>
+
+                    <div className="d-none d-md-block ">
+                        <Carousel itemsToShow={4} itemPadding={[10, 60]} showArrows={false}>
+                            {mapDoble}
+                        </Carousel>
+                    </div>
                 </div>
 
                 <div className={`${Gallery == "loft" ? '' : 'd-none'} container col-md-12 `}>
-                    <ImageGallery items={loft} lazyLoad={true} showThumbnails={false} showNav={false}
-                        showBullets={true} showIndex={true} useBrowserFullscreen={true} />
+                <div className="d-block d-md-none">
+                        <Carousel itemsToShow={1} itemPadding={[10, 60]} showArrows={false}>
+                            {mapLoft}
+                        </Carousel>
+                    </div>
+
+                    <div className="d-none d-md-block ">
+                        <Carousel itemsToShow={4} itemPadding={[10, 60]} showArrows={false}>
+                            {mapLoft}
+                        </Carousel>
+                    </div>
                 </div>
+
             </div>
+
             <div className="row ">
 
                 <div className="col-md-6">
@@ -171,7 +270,7 @@ const Instalaciones = (props) => {
 
                 <div className="container col-xs-12 col-md-6 text-center mt-2">
                     <div className="row d-flex align-items-center d-flex justify-content-center h-100 w-100">
-                    <p className="h1">Beneficios y servicios</p>
+                        <p className="h1">Beneficios y servicios</p>
 
                         <div className="col-6 col-md-6">
                             <img src={Bussines} alt="icon svg"></img>
@@ -182,7 +281,7 @@ const Instalaciones = (props) => {
                             <img src={Gym} alt="icon svg"></img>
                             <p>Gimnasio</p>
                         </div>
-                        
+
                         <div className="col-6 col-md-6">
                             <img src={Wifi} alt="icon svg"></img>
                             <p>Wifi Gratis</p>
@@ -192,7 +291,7 @@ const Instalaciones = (props) => {
                             <img src={Recep} alt="icon svg"></img>
                             <p>Recepción</p>
                         </div>
-                        
+
                         <div className="col-6">
                             <img src={Parking} alt="icon svg"></img>
                             <p>Estacionamiento</p>
@@ -207,7 +306,7 @@ const Instalaciones = (props) => {
             </div>
 
             <div className="row card border-0 ">
-                <img className="card-img pt-5 " src={ImageI2} alt="imagen"/>
+                <img className="card-img pt-5 " src={ImageI2} alt="imagen" />
                 <div className="card-img-overlay d-flex justify-content-end">
                     <p className="bg-missum text-white overInstalation">No te pierdas la oportunidad de vivir la experiencia Missum</p>
                 </div>

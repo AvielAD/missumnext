@@ -23,7 +23,9 @@ const Resultados = ({departamentos }) => {
             ])
     }
     const preCards = departamentos.map((item)=> check.includes(item[6]) ? item : [])
+
     
+
     return (
         <>
             <Head>
@@ -33,8 +35,7 @@ const Resultados = ({departamentos }) => {
                 <p className="h2 mt-5 mb-5">Resultados de tu Busqueda</p>
                 <div className="row mb-5 d-flex justify-content-center">
                     <NavbarApp />
-                    
-                   
+                    <script type="text/javascript" src="https://resx.octorate.com/octobook/resources/widget/js/form.js" data-sitekey="0f52517309bb16019154794e6608bf73"></script>
                 </div>
 
                 <div className="">
@@ -78,6 +79,7 @@ const Resultados = ({departamentos }) => {
 
 
                         <div className="col-md-9">
+                            
                         </div>
                     </div>
                 </div>
