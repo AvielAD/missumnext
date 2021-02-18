@@ -82,7 +82,7 @@ a {
 elementos carousel home
 */
 .heightCarouselHome{
-  height: 100vh;
+  height: 90vh;
   width: 100%;
 }
 
@@ -150,6 +150,46 @@ elements Overlay
 }
 
 /**Seccion Instalaciones*/
+/**Seccion Reviews*/
+
+.padingReview{
+  padding: 2rem;
+  height: 40vh;
+}
+.imageView{
+  height: 65vh;
+  width: 100%;
+}
+.paddingSlides{
+  padding: 6rem;
+}
+
+.padingReview .title{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.padingReview .iconos{
+  font-size: 3rem;
+}
+
+@media (max-width: 767.98px) { 
+  .padingReview{
+    padding: 0;
+  } 
+  .padingReview .title{
+    font-size: 1rem;
+  }
+
+  .paddingSlides{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+}
+
+/**Seccion Reviews*/
 /** space link a
 ul li{
   text-decoration: none;

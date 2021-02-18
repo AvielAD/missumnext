@@ -20,12 +20,12 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
         <title>Missum</title>
       </Head>
 
-
-      <section className="">
-          <CarouselHome slidesCarousel={slidesCarousel} />
+      <section className="heightCarouselHome ">
+        <CarouselHome slidesCarousel={slidesCarousel} />
       </section>
 
-      <section className="container mt-4 mb-4">
+      <section className="container mt-5 mb-4 ">
+
         <div className="row-12 text-center font-weight-bold mb-5">
           <p className="h1">Missum, tu nuevo concepto Versatile Living</p>
         </div>

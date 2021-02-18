@@ -2,10 +2,10 @@ import Head from 'next/head';
 import Bed from './assets/DSC064401.png';
 import Mesa1 from './assets/DSC063792.png';
 import Mesa2 from './assets/DSC064341.png';
-import Mesa3 from './assets/DSC062661.png';
 import Sillon1 from './assets/DSC065591.png';
 
-const Acercade = () => {
+const Acercade = (props) => {
+
     return (
         <>
             <Head>
@@ -27,17 +27,11 @@ const Acercade = () => {
                 </div>
                 <img className="img-fluid col-md-3" src={Mesa2} alt="" />
             </div>
-            <div className="d-flex justify-content-center mt-3 mb-3">
-                <img className="img-fluid" src={Mesa3}/>
-            </div>
-            <div className="row mt-5 card border-0">
+
+           
+            <div className="row card border-0">
                 <img className="img-card imgAbout" src={Sillon1} alt="imagen about"/>
-                    <div className="card-img-overlay overAbout2 bg-missum">
-                        <div className="row d-flex justify-content-center">
-                            <p className="">¿Qué dicen nuestros clientes?</p>
-                            <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elite.</p>
-                        </div>
-                    </div>
+                    
             </div>
 
         </>

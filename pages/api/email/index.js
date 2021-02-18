@@ -20,7 +20,7 @@ export default async function emailHandler(req, res){
       
         let info = await transporter.sendMail({
             from: 'invitado.missum@outlook.com',
-            to: 'aviel.aldama@gmail.com',
+            to: 'operaciones@missum.mx, gerencia@missum.mx',
             subject: Name,
             text: `Número Contacto: ${Telefono}`,
             html: `<div> Invitado: ${Name} <ul><li>${Email}</li> <li>${Telefono}</li></ul> <p>${Mensaje}</p></div>`

@@ -1,0 +1,17 @@
+.nextButton{
+    color: white;
+    display: none;
+}
+.previousButton{
+    color: white;
+}
+.fontStyle{
+    font-style: italic;
+}
+
+.heightTab{
+    height: 800px;
+}
+.iconosRev{
+    font-size: 4rem;
+}
