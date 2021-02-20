@@ -39,7 +39,6 @@ const NavBarApp = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
-
   const classes = useStyles();
 
   const [state, setState] = React.useState({
@@ -89,7 +88,7 @@ const NavBarApp = () => {
 
       <div className={`${styles.containerContent} row`}>
 
-        <div className="col-2">
+        <div className="col-2 changePointer">
           <Link href="/">
             <img src={Logo} alt="logo" />
           </Link>

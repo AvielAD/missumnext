@@ -106,6 +106,8 @@ export const getStaticProps = async (ctx) => {
       Promos: BannerPromos.data,
       Equipament: BannerEquipament.data,
       Video: VideoHome.data,
-    }
+    },
+    revalidate:1
+
   }
 }

@@ -66,7 +66,6 @@ export default withFormik({
     },
     handleSubmit(values, formikBag) {
         const res = axios.post('/api/email', values).then(res => res.data);
-        console.log(values)
         alert(`Recibimos tu Información ${values.Name}, en breve nos comunicamos contigo.`)
         formikBag.setSubmitting(false);
     }

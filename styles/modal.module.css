@@ -1,0 +1,82 @@
+.modalContainer{
+    height: 100vh;
+    width: 80%;
+}
+.modalContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonReserva{
+    
+    position:fixed;
+    z-index: 100;
+    transform: rotate(-90deg);
+    transform-origin: right;
+    right: 0;
+    top: 40%;
+    height: 8rem;
+    font-size: 1.5rem;
+}
+.buttonReserva2{
+    position: fixed;
+    transform: rotate(-90deg);
+    font-size: 1.5rem;
+    height: 10rem;
+    top: 48%;
+}
+.imageContainer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.imageContent{
+    width: 90%;
+    height: 95%;
+    border: solid;
+    border-style: dotted;
+    border-color: white;
+    padding: 1rem;
+}
+.imageTextOver{
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: right;
+}
+.imageTextOver2{
+    height: 95%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.formName{
+    background-image: url('../pages/assets/user.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.forEmail{
+    background-image: url('../pages/assets/mail.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.forButton{
+    margin-top: 1.5rem;
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    width: 7rem;
+    border-radius: 40px;
+}
+.forButton:focus{
+    outline: none;
+    background-color: #5F0560;
+}
