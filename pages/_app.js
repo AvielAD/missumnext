@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-animated-slider/build/horizontal.css';
+import 'react-image-gallery/styles/css/image-gallery.css';
 
 import Header from '../Components/NavBarApp';
 import BannerCovid from '../Components/BannerCovid';
