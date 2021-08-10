@@ -74,6 +74,32 @@ function MyApp({ Component, pageProps }) {
 
       <Component {...pageProps} />
 
+      <section className="bg-missum container-fluid">
+        <FooterApp />
+      </section>
+    </>
+  )
+}
+
+export default withFormik({
+  mapPropsToValues(props) {
+    return {
+      Name: '',
+      Email: '',
+      Telefono: '',
+      Mensaje: ''
+    }
+  },
+  handleSubmit(values, formikBag) {
+    const res = axios.post('/api/email', values).then(res => res.data);
+    alert(`Recibimos tu Información ${values.Name}, en breve nos comunicamos contigo.`)
+    formikBag.setSubmitting(false);
+  }
+
+})(MyApp);
+/**
+ * 
+ * 
       <div className={`bg-missum text-white ${styles.buttonReserva} changePointer p-3`} onClick={handleOpen}>
         <div className="d-flex flew-wrap">
           <CalendarTodayIcon style={{ fontSize: 25 }} />
@@ -181,26 +207,7 @@ function MyApp({ Component, pageProps }) {
 
       </Modal>
 
-      <section className="bg-missum container-fluid">
-        <FooterApp />
-      </section>
-    </>
-  )
-}
-
-export default withFormik({
-  mapPropsToValues(props) {
-    return {
-      Name: '',
-      Email: '',
-      Telefono: '',
-      Mensaje: ''
-    }
-  },
-  handleSubmit(values, formikBag) {
-    const res = axios.post('/api/email', values).then(res => res.data);
-    alert(`Recibimos tu Información ${values.Name}, en breve nos comunicamos contigo.`)
-    formikBag.setSubmitting(false);
-  }
-
-})(MyApp);
+ * 
+ * 
+ * 
+ */
