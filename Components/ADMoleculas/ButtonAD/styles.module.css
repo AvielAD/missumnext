@@ -1,0 +1,71 @@
+
+.btnGhost{
+    border: 2px solid white;
+    padding: 10px 40px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: white;
+    transition: color 0.5s white 0.5s;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 1em;
+    min-width: 140px;
+    text-align: center;
+  }
+
+  .btnGhost.round{
+    border-radius: 30px;
+  }
+
+
+  /** Missum 1 #5F0569 */
+  .btnGhost.missum{
+    background-color: #5F0569;
+    border-color: #5F0569;
+    color: white;
+  }
+  .btnGhost.missum:focus{
+    outline: none;
+  }
+  .btnGhost.missum:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: #5F0569;
+    
+  }
+  
+  .btnGhost.missum:active{
+    box-shadow: inset 0 0 20px #5F0569;
+  }
+
+  /** Missum 2 #F15C22 */
+.btnGhost.missumT2{
+    background-color: #F15C22;
+    border-color: #F15C22;
+    color: white;
+}
+.btnGhost.missumT2:hover{
+    background-color: transparent;
+    color: #F15C22;
+}
+.btnGhost.missumT2:active{
+    box-shadow: inset 0 0 20px #F15C22;
+}
+/** Missum 3 white*/
+.btnGhost.missumT3{
+    background-color: transparent;
+    border-color: grey;
+    color: black;
+}
+.btnGhost.missumT3:hover{
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.btnGhost.missumT3:active{
+    box-shadow: inset 0 0 px white;
+}

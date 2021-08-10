@@ -1,0 +1,14 @@
+
+
+.boxNovisible{
+    display: none;
+}
+.boxVisible{
+    display: block;
+}
+.tagColor{
+    color: indigo;
+}
+.tagColorText{
+    color: black;
+}

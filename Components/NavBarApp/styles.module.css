@@ -1,0 +1,14 @@
+.navbarappLink{
+    color: black;
+    padding: 0.5rem;
+}
+.containerNavApp{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerContent{
+    width: 95%;
+}

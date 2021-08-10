@@ -1,0 +1,302 @@
+@font-face{
+  font-family: MissumFont;
+  font-display: swap;
+  src: url('./Font/GillSans.otf');
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: MissumFont;
+}
+.bg-missum{
+  background: #5F0569 ;
+}
+.bg-missum-grey{
+  background: #F4F2F2;
+}
+.text-missum{
+  color: #5F0569;
+}
+
+.text-missum:hover{
+  color: #5F0569;
+}
+.text-missum-white{
+  color: white !important;
+}
+
+.margin-top-5{
+  margin-top: 5;
+}
+
+.shadow-box-1{
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 23rem;
+}
+
+.borderCircle1{
+  border-radius: 60px;
+}
+
+.positionHomeSearch{
+  z-index: 1;
+}
+
+.changeListPointer:hover{
+  cursor: pointer;
+}
+.changePointer{
+  color:  #5F0569;
+}
+
+.changePointer:hover{
+  cursor: pointer !important;
+  color:  #5F0569;
+}
+
+.overlaySearch{
+  z-index: 1;
+}
+
+
+.title-h1Carousel{
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
+.imageResults{
+  height: 13rem;
+}
+/**
+elementos carousel home
+*/
+.heightCarouselHome{
+  height: 90vh;
+  width: 100%;
+}
+
+
+/**
+elements Overlay
+*/
+
+.overlaySearch{
+  float: right;
+}
+
+/**
+  Detalles descripcion [SLUG]
+*/
+
+.ImgSlugDepartaments{
+  height: 22rem;
+  
+}
+
+
+/** Single carousel*/
+
+.rec .rec-indicators{
+  border-radius: 40px;
+}
+.rec .rec-pagination .rec-dot{
+  font-size: 0.3rem;
+  margin: 1.3rem;
+  border-radius: 40px 40px;
+}
+
+/** size dimension bussines center*/
+.box-video{
+  height: 400px;
+  width: 300px;
+  font-size: 1rem;
+}
+
+
+/**Video dimensions define*/
+
+.boxVideo{
+  width: 100%;
+  height: 40rem;
+}
+.boxMultimedia{
+  width: 100%;
+  height: 25rem;
+}
+.heightVideo{
+  width: 100%;
+  height: 40rem !important;
+}
+
+/*Seccion Promociones*/
+.heightPromociones{
+  height: 30rem;
+}
+
+/*Seccion Equipamiento Urbano y Turismo*/
+.heightEquipament{
+  height: 33rem;
+}
+
+/**Seccion Instalaciones*/
+/**Seccion Reviews*/
+
+.padingReview{
+  padding: 2rem;
+  height: 40vh;
+}
+.imageView{
+  height: 65vh;
+  width: 100%;
+}
+.paddingSlides{
+  padding: 6rem;
+}
+
+.padingReview .title{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.padingReview .iconos{
+  font-size: 3rem;
+}
+
+@media (max-width: 767.98px) { 
+  .padingReview{
+    padding: 0;
+  } 
+  .padingReview .title{
+    font-size: 1rem;
+  }
+
+  .paddingSlides{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+}
+
+/**Seccion Reviews*/
+/** space link a
+ul li{
+  text-decoration: none;
+  list-style: none;
+}
+ul li {
+  margin-top: 1rem;
+}
+*/
+
+.heighGallery{
+  height: 20rem;
+}
+.overInstalation{
+  padding: 2.5rem;
+  height: 200px;
+  width: 400px;
+  font-size: 1.6rem;
+}
+.galleryInstal{
+  height: 20rem;
+  width: 100%;
+}
+/**Seccion acerca de*/
+.overAbout1{
+  height: 200px;
+  width: 400px;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overAbout2{
+  text-align: center;
+  color: white;
+  height: 200px;
+  width: 400px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.imgAbout{
+  height: 60vh;
+  width: 98%;
+  padding-top: 5rem;
+}
+
+
+/***/
+@media (max-width: 575.98px) { 
+  .heightCarouselHome{
+    height: 50vh;
+    width: 100%;
+  }
+
+  .box-video{
+    height: 220px;
+    width: 180px;
+    font-size: 0.7rem;
+  }
+
+  .overInstalation{
+    padding: 1rem;
+    height: 80px;
+    width: 250px;
+    font-size: 1rem;
+  }
+
+  .overInstalation p {
+    height: 100%;
+  }
+
+  /**seccion responsive acerca de*/
+  .overAbout1{
+    height: 70px;
+    width: 290px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overAbout2{
+    text-align: center;
+    color: white;
+    height: 150px;
+    width: 300px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgAbout{
+    height: 50vh;
+    width: 95.9%;
+  }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { }
+
+@media (min-width: 768px) and (max-width: 991.98px) { }
+
+@media (min-width: 992px) and (max-width: 1199.98px) { }
+
+@media (min-width: 1200px) { }
