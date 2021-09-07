@@ -6,12 +6,13 @@ import arbnb from './assets/otas/airbnb-512.png';
 import booking from './assets/otas/booking3.png';
 import google from './assets/otas/google.jpg';
 import Head from 'next/head';
-
+    
 const review = () => {
     return (
         <>
             <Head>
                 <title>Missum - Reseñas</title>
+                <script src='./trackingSojern.js' type="text/javascript"/>
             </Head>
 
             <div className="card border-0">

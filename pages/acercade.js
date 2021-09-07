@@ -3,6 +3,7 @@ import Bed from './assets/DSC064401.png';
 import Mesa1 from './assets/DSC063792.png';
 import Mesa2 from './assets/DSC064341.png';
 import Sillon1 from './assets/DSC065591.png';
+import {Helmet} from 'react-helmet';
 
 const Acercade = (props) => {
 
@@ -10,6 +11,7 @@ const Acercade = (props) => {
         <>
             <Head>
                 <title>Missum - Acerca de</title>
+                <script src='./trackingSojern.js' type="text/javascript"/>
             </Head>
             <div className="">
                 <div className="card border-0">
@@ -33,6 +35,8 @@ const Acercade = (props) => {
                 <img className="img-card imgAbout" src={Sillon1} alt="imagen about"/>
                     
             </div>
+
+           
 
         </>
     )

@@ -6,7 +6,7 @@ import NavbarApp from '../Components/ADMoleculas/SearchBar';
 import api from '../Services/api';
 import Link from 'next/link';
 import Login from '../Components/Login';
-
+import { Helmet } from 'react-helmet';
 const Resultados = ({departamentos }) => {
     const [check, setCheck] = useState([]);
     const [show, setShow] = useState(true);
@@ -30,6 +30,7 @@ const Resultados = ({departamentos }) => {
         <>
             <Head>
                 <title>Missum - Resultados</title>
+                <script src='./trackingSojern.js' type="text/javascript"/>
             </Head>
             <div className="container">
                 <p className="h2 mt-5 mb-5">Resultados de tu Busqueda</p>

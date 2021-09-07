@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Helmet } from 'react-helmet';
 const item = 
     {
         Titulo: 'Departamento tipo loft',
@@ -14,6 +15,8 @@ const Departamento =() =>{
         <>  
             <Head>
                 <title>Missum - Departamento</title>
+                <script src='./trackingSojern.js' type="text/javascript"/>
+
             </Head>
             <div className="container-fluid d-flex justify-content-between">
                 <div className="">
@@ -36,6 +39,7 @@ const Departamento =() =>{
 
             </div>
 
+           
         </>
     )
 }

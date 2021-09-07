@@ -1,10 +1,17 @@
 import api from '../Services/api';
+import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
 const Covid = ({Video}) => {
     
 
     return (
         <>
+            <Head>
+                <title>Missum - Covid19</title>
+                <script src='./trackingSojern.js' type="text/javascript"/>
+            </Head>
+
             <div className="container">
                 <video className="boxMultimedia" preload="none" controls poster={`${process.env.NEXT_PUBLIC_API_HOST}${Video.Portada.url}`}>
                     <source src={`${process.env.NEXT_PUBLIC_API_HOST}${Video.video.url}`} type="video/mp4" />
@@ -87,6 +94,9 @@ const Covid = ({Video}) => {
                         </ul>       
                 </div>
             </div>
+
+
+           
 
         </>
     )

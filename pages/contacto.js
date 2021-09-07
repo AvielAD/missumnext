@@ -8,6 +8,7 @@ const Contacto = () => {
         <>
             <Head>
                 <title>Missum - Contacto</title>
+                <script src='./trackingSojern.js' type="text/javascript"/>
             </Head>
 
 
@@ -28,6 +29,9 @@ const Contacto = () => {
                     </div>
                 </div>
             </section>
+
+
+          
 
         </>
     )

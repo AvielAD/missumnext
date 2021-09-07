@@ -11,7 +11,7 @@ import Carousel from 'react-elastic-carousel';
 import Cocina from './assets/cocina1.png';
 import bussines1 from './assets/bussines1.png';
 import bussines2 from './assets/bussines2.png';
-
+import { Helmet} from 'react-helmet';
 export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament, Video}) {
   
   return (
@@ -87,8 +87,10 @@ export default function Home({ slidesCarousel, slidesConcept, Promos, Equipament
         <BannerUbicacion />
       </section>
 
-
-
+      
+      <Helmet>
+        <script src='./homeSojern.js' type="text/javascript"/>
+      </Helmet>
     </>
   )
 }

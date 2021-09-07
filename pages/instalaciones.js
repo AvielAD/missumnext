@@ -18,6 +18,8 @@ import api from '../Services/api';
 import ImageI from './assets/DSC063791.png';
 import ImageI2 from './assets/DSC063601.png';
 import Carousel from 'react-elastic-carousel';
+import { Helmet } from 'react-helmet';
+
 
 const Instalaciones = (props) => {
     const { Video, Amenidades, Eventos, HandicapF, HandicapP, DepartDoble, Loft } = props;
@@ -107,6 +109,7 @@ const Instalaciones = (props) => {
         <>
             <Head>
                 <title>Missum - Instalaciones</title>
+                <script src='./trackingSojern.js' type="text/javascript"/>
             </Head>
 
             <div className="container">
